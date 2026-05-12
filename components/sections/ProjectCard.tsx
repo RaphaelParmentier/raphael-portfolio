@@ -5,6 +5,8 @@ type ProjectCardProps = {
   stack: string[];
   highlights: string[];
   github: string;
+  live?: string;
+  api?: string;
   status: string;
 };
 
@@ -15,6 +17,8 @@ export default function ProjectCard({
   stack,
   highlights,
   github,
+  live,
+  api,
   status,
 }: ProjectCardProps) {
   return (
@@ -24,7 +28,7 @@ export default function ProjectCard({
       </div>
 
       <div className="relative z-10">
-        <div className="mb-6 flex items-center justify-between">
+        <div className="mb-6 flex items-center justify-between gap-4">
           <span className="rounded-full border border-orange-500/20 bg-orange-500/10 px-3 py-1 text-xs font-medium text-orange-300">
             {category}
           </span>
@@ -60,26 +64,42 @@ export default function ProjectCard({
               className="flex items-center gap-3 rounded-2xl border border-slate-800 bg-slate-900/50 px-4 py-3"
             >
               <div className="h-2 w-2 rounded-full bg-orange-400" />
-
-              <span className="text-sm text-slate-300">
-                {highlight}
-              </span>
+              <span className="text-sm text-slate-300">{highlight}</span>
             </div>
           ))}
         </div>
 
-        <div className="mt-8 flex gap-4">
+        <div className="mt-8 flex flex-wrap gap-4">
+          {live && (
+            <a
+              href={live}
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-full bg-orange-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-orange-400"
+            >
+              Live Demo
+            </a>
+          )}
+
           <a
             href={github}
             target="_blank"
-            className="rounded-full bg-orange-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-orange-400"
+            rel="noreferrer"
+            className="rounded-full border border-slate-700 px-5 py-3 text-sm font-semibold text-slate-200 transition hover:border-orange-400 hover:text-orange-300"
           >
-            View Repository
+            GitHub
           </a>
 
-          <button className="rounded-full border border-slate-700 px-5 py-3 text-sm font-semibold text-slate-200 transition hover:border-orange-400 hover:text-orange-300">
-            Live Demo Soon
-          </button>
+          {api && (
+            <a
+              href={api}
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-full border border-slate-700 px-5 py-3 text-sm font-semibold text-slate-200 transition hover:border-orange-400 hover:text-orange-300"
+            >
+              API Docs
+            </a>
+          )}
         </div>
       </div>
     </div>

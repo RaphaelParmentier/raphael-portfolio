@@ -1,24 +1,36 @@
 export const projects = [
   {
     title: "AI Data Report Generator",
-    category: "AI Analytics · Automation",
+    category: "Industrial AI · Data Quality Platform",
     description:
-      "AI-powered analytical workflow transforming raw CSV datasets into structured quality diagnostics, visual reports and business-oriented insights.",
+      "Full-stack AI-powered dataset inspection platform designed to transform raw CSV or Excel files into actionable quality diagnostics, interactive visual analysis and production-oriented reporting workflows.",
+
     stack: [
+      "Next.js",
+      "TypeScript",
+      "FastAPI",
       "Python",
       "Pandas",
-      "Next.js",
-      "FastAPI",
-      "LLM",
+      "Recharts",
+      "TailwindCSS",
       "Automation",
     ],
+
     highlights: [
-      "Automated data quality analysis",
-      "Markdown & HTML report generation",
-      "Dynamic visualization pipeline",
-      "Production-oriented architecture",
+      "Interactive dataset inspection dashboard",
+      "Automated data quality scoring",
+      "Missing values & duplicate detection",
+      "Dynamic visual analytics",
+      "CSV & Excel parsing workflows",
+      "Full-stack deployment with Vercel + Render",
     ],
+
     github: "https://github.com/RaphaelParmentier/ai-data-report-generator",
-    status: "Active Development",
+
+    live: "https://raphael-portfolio-two.vercel.app",
+
+    api: "https://ai-data-report-generator-zr71.onrender.com/docs",
+
+    status: "Live",
   },
 ];
