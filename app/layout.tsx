@@ -13,17 +13,19 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.raphaelparmentier.dev"),
+
   title: "Raphaël Parmentier | AI Engineer & Data Scientist",
 
   description:
-    "AI Engineer & Data Scientist building AI-assisted analytical systems, automation workflows and production-oriented data applications.",
+    "AI Engineer & Data Scientist specializing in AI systems, automation and data applications.",
 
   openGraph: {
     title: "Raphaël Parmentier",
     description:
       "AI Engineer & Data Scientist specializing in AI systems, automation and data applications.",
 
-    url: "https://raphaelparmentier.dev",
+    url: "https://www.raphaelparmentier.dev",
     siteName: "Raphaël Parmentier",
 
     images: [
@@ -54,11 +56,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="en">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
