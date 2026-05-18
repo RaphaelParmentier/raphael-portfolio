@@ -31,7 +31,7 @@ export const projects = [
       "https://github.com/RaphaelParmentier/ai-data-report-generator",
 
     live:
-      "https://ai-data-report-generator.vercel.app",
+      "https://audit.raphaelparmentier.dev",
 
     api:
       "https://ai-data-report-generator-zn71.onrender.com/docs",
