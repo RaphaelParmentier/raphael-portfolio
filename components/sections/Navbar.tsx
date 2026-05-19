@@ -29,47 +29,51 @@ export default function Navbar() {
             RP SYSTEMS
           </a>
 
-          <nav className="hidden items-center gap-8 md:flex">
-            <a
-              href="#projects"
-              className="
-                text-sm text-[#A7A29A]
-                transition-colors
-                hover:text-[#F3F1EA]
-              "
-            >
-              Projects
-            </a>
+         <nav className="flex items-center gap-3 md:gap-8">
+          <a
+            href="#projects"
+            className="
+              hidden
+              text-sm text-[#A7A29A]
+              transition-colors
+              hover:text-[#F3F1EA]
+              sm:inline
+            "
+          >
+            Projects
+          </a>
 
-            <a
-              href="#experience"
-              className="
-                text-sm text-[#A7A29A]
-                transition-colors
-                hover:text-[#F3F1EA]
-              "
-            >
-              Experience
-            </a>
+          <a
+            href="#experience"
+            className="
+              hidden
+              text-sm text-[#A7A29A]
+              transition-colors
+              hover:text-[#F3F1EA]
+              md:inline
+            "
+          >
+            Experience
+          </a>
 
-            <button
-              onClick={() => setIsContactOpen(true)}
-              className="
-                rounded-full
-                bg-orange-500/10
-                px-4
-                py-2
-                text-sm
-                font-semibold
-                text-orange-300
-                transition
-                hover:bg-orange-500
-                hover:text-white
-              "
-            >
-              Contact
-            </button>
-          </nav>
+          <button
+            onClick={() => setIsContactOpen(true)}
+            className="
+              rounded-full
+              bg-orange-500/10
+              px-4
+              py-2
+              text-sm
+              font-semibold
+              text-orange-300
+              transition
+              hover:bg-orange-500
+              hover:text-white
+            "
+          >
+            Contact
+          </button>
+        </nav>
         </div>
       </header>
 
