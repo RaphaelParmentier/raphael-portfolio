@@ -55,9 +55,16 @@ export default function Navbar() {
             <button
               onClick={() => setIsContactOpen(true)}
               className="
-                text-sm text-[#A7A29A]
-                transition-colors
-                hover:text-[#F3F1EA]
+                rounded-full
+                bg-orange-500/10
+                px-4
+                py-2
+                text-sm
+                font-semibold
+                text-orange-300
+                transition
+                hover:bg-orange-500
+                hover:text-white
               "
             >
               Contact

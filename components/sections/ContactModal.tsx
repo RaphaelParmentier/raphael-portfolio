@@ -63,9 +63,13 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
           <a
             href={`mailto:${email}`}
             className="rounded-full border border-slate-700 px-6 py-3 text-sm font-semibold text-slate-200 transition hover:border-orange-400 hover:text-orange-300"
-          >
-            Open email app
+            >
+            Open mail client
           </a>
+          <p className="mt-4 text-xs leading-5 text-slate-500">
+            If this does not open your email app, copy the address above and paste it into
+            your preferred email client.
+          </p>
 
           <a
             href="https://www.linkedin.com/in/raphaelparmentier/"

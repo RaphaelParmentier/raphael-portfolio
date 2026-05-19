@@ -49,13 +49,6 @@ export default function Hero() {
               View selected work
             </a>
 
-            <a
-              href="#contact"
-              className="rounded-full border border-slate-700 px-6 py-3 text-sm font-semibold text-slate-200 transition hover:border-orange-400 hover:text-orange-300"
-            >
-              Contact
-            </a>
-
            <a
               href="/Raphael_Parmentier_CV_EN.pdf"
               target="_blank"
