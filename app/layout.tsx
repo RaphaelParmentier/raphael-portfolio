@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: "/images/og-portfolio.png",
+        url: "/images/og-portfolio.jpg",
         width: 1200,
         height: 630,
         alt: "Raphaël Parmentier Portfolio",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     title: "Raphaël Parmentier",
     description:
       "AI Engineer & Data Scientist specializing in AI systems, automation and data applications.",
-    images: ["/images/og-portfolio.png"],
+    images: ["/images/og-portfolio.jpg"],
   },
 };
 
