@@ -1,25 +1,25 @@
 export default function Hero() {
   const skills = [
-    "GenAI",
+    "AI Systems",
     "Data Science",
     "Automation",
-    "LLM Apps",
-    "Bioinformatics",
-    "MLOps",
+    "Statistical Modeling",
+    "R & Python",
+    "Full-stack AI Apps",
   ];
 
   const metrics = [
     {
       value: "3+",
-      label: "years in pharma statistics",
+      label: "years in regulated pharmaceutical statistics",
     },
     {
-      value: "AI",
-      label: "automation & LLM systems",
+      value: "Live",
+      label: "deployed AI data quality platform",
     },
     {
       value: "Teaching",
-      label: "university-level pedagogy",
+      label: "statistics, Big Data and analytics workshops",
     },
   ];
 
@@ -28,16 +28,17 @@ export default function Hero() {
       <div className="mx-auto grid w-full max-w-7xl gap-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
         <div>
           <p className="mb-5 inline-flex rounded-full border border-orange-500/30 bg-orange-500/10 px-4 py-2 text-xs font-medium uppercase tracking-[0.25em] text-orange-300">
-            AI Consultant · Data Scientist · Lecturer
+            AI Engineer · Data Scientist · Automation Builder
           </p>
 
           <h1 className="max-w-4xl text-5xl font-semibold tracking-tight text-white md:text-7xl">
-            Building intelligent systems with scientific rigor.
+            Designing AI-assisted analytical systems with scientific rigor.
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-400">
-            Former pharmaceutical statistician specialized in AI systems,
-            automation, applied machine learning and data-driven products.
+            Former pharmaceutical statistician now building production-oriented
+            AI systems, automation workflows and data applications combining
+            statistical reasoning, engineering discipline and product thinking.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
@@ -45,11 +46,18 @@ export default function Hero() {
               href="#projects"
               className="rounded-full bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-400"
             >
-              View projects
+              View selected work
             </a>
 
             <a
-              href="/cv.pdf"
+              href="#contact"
+              className="rounded-full border border-slate-700 px-6 py-3 text-sm font-semibold text-slate-200 transition hover:border-orange-400 hover:text-orange-300"
+            >
+              Contact
+            </a>
+
+            <a
+              href="/Raphael_Parmentier_CV_EN.pdf"
               className="rounded-full border border-slate-700 px-6 py-3 text-sm font-semibold text-slate-200 transition hover:border-orange-400 hover:text-orange-300"
             >
               Download CV
@@ -70,9 +78,12 @@ export default function Hero() {
 
         <div className="rounded-3xl border border-slate-800 bg-slate-950/70 p-6 shadow-2xl shadow-orange-500/10 backdrop-blur">
           <div className="mb-6 flex items-center justify-between border-b border-slate-800 pb-4">
-            <span className="text-sm text-slate-400">AI systems profile</span>
+            <span className="text-sm text-slate-400">
+              AI / Data profile
+            </span>
+
             <span className="rounded-full bg-emerald-500/10 px-3 py-1 text-xs text-emerald-300">
-              Available
+              Open to roles & missions
             </span>
           </div>
 
@@ -85,6 +96,7 @@ export default function Hero() {
                 <div className="text-2xl font-semibold text-white">
                   {metric.value}
                 </div>
+
                 <div className="mt-1 text-sm text-slate-400">
                   {metric.label}
                 </div>
@@ -94,8 +106,8 @@ export default function Hero() {
 
           <div className="mt-6 rounded-2xl border border-orange-500/20 bg-orange-500/10 p-5">
             <p className="text-sm leading-6 text-orange-100">
-              Positioning: scientific rigor, production-grade AI workflows,
-              data products, and practical automation.
+              Positioning: AI engineering, statistical modeling, data quality,
+              automation and analytical decision-support systems.
             </p>
           </div>
         </div>
