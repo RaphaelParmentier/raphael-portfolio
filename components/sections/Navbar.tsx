@@ -1,70 +1,75 @@
+"use client";
+
+import { useState } from "react";
+import ContactModal from "./ContactModal";
+
 export default function Navbar() {
+  const [isContactOpen, setIsContactOpen] = useState(false);
+
   return (
-    <header
-      className="
-        fixed top-0 left-0 right-0 z-50
-        border-b border-[#1F232B]
-        bg-[#08090B]/70
-        backdrop-blur-xl
-      "
-    >
-      <div
+    <>
+      <header
         className="
-          mx-auto
-          flex
-          max-w-7xl
-          items-center
-          justify-between
-          px-6
-          py-4
+          fixed top-0 z-50 w-full
+          border-b border-white/5
+          bg-[#08090B]/80
+          backdrop-blur-xl
         "
       >
-        {/* Logo */}
-        <div className="flex items-center gap-3">
-          <div
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
+          <a
+            href="#top"
             className="
-              h-3
-              w-3
-              rounded-full
-              bg-[#E9792D]
-              shadow-[0_0_20px_rgba(233,121,45,0.8)]
-            "
-          />
-
-          <span
-            className="
-              text-sm
-              uppercase
-              tracking-[0.3em]
+              flex items-center gap-3
+              text-sm font-medium tracking-[0.3em]
               text-[#F3F1EA]
             "
           >
-            RP Systems
-          </span>
-        </div>
+            <div className="h-2 w-2 rounded-full bg-[#E9792D]" />
+            RP SYSTEMS
+          </a>
 
-        {/* Navigation */}
-        <nav className="hidden gap-8 md:flex">
-          {[
-            { label: "Projects", href: "#projects" },
-            { label: "Experience", href: "#experience" },
-            { label: "Contact", href: "#contact" },
-          ].map((item) => (
+          <nav className="hidden items-center gap-8 md:flex">
             <a
-              key={item.label}
-              href={item.href}
+              href="#projects"
               className="
-                text-sm
-                text-[#A7A29A]
+                text-sm text-[#A7A29A]
                 transition-colors
                 hover:text-[#F3F1EA]
               "
             >
-              {item.label}
+              Projects
             </a>
-          ))}
-        </nav>
-      </div>
-    </header>
+
+            <a
+              href="#experience"
+              className="
+                text-sm text-[#A7A29A]
+                transition-colors
+                hover:text-[#F3F1EA]
+              "
+            >
+              Experience
+            </a>
+
+            <button
+              onClick={() => setIsContactOpen(true)}
+              className="
+                text-sm text-[#A7A29A]
+                transition-colors
+                hover:text-[#F3F1EA]
+              "
+            >
+              Contact
+            </button>
+          </nav>
+        </div>
+      </header>
+
+      <ContactModal
+        isOpen={isContactOpen}
+        onClose={() => setIsContactOpen(false)}
+      />
+    </>
   );
 }

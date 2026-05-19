@@ -8,7 +8,10 @@ import Contact from "@/components/sections/Contact";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen overflow-x-hidden bg-[#08090B] text-[#F3F1EA]">
+    <main
+      id="top"
+      className="relative min-h-screen overflow-x-hidden bg-[#08090B] text-[#F3F1EA]"
+    >
 
       <div
         className="

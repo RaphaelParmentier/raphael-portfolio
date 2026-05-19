@@ -20,9 +20,9 @@ export default function Contact() {
           <a
             href="mailto:pro.raphael.parmentier@gmail.com"
             className="rounded-full bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-400"
-          >
+            >
             Email me
-          </a>
+         </a>
 
           <a
             href="https://www.linkedin.com/in/raphaelparmentier/"
