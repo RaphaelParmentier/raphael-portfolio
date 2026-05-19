@@ -56,8 +56,10 @@ export default function Hero() {
               Contact
             </a>
 
-            <a
+           <a
               href="/Raphael_Parmentier_CV_EN.pdf"
+              target="_blank"
+              rel="noreferrer"
               className="rounded-full border border-slate-700 px-6 py-3 text-sm font-semibold text-slate-200 transition hover:border-orange-400 hover:text-orange-300"
             >
               Download CV
