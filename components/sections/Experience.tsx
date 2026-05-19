@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const experiences = [
   {
-    period: "Apr 2025 — Present",
+    period: "Apr 2026 — Present",
     title: "Machine Learning Engineer",
     company: "DataScientest / Mines Paris",
     description:

@@ -35,9 +35,11 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
 
         <div className="mt-8 flex flex-wrap gap-4">
           <a
-            href="mailto:pro.raphael.parmentier@gmail.com"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=pro.raphael.parmentier@gmail.com&su=AI%20%2F%20Data%20Opportunity"
+            target="_blank"
+            rel="noreferrer"
             className="rounded-full bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-400"
-          >
+            >
             Email me
           </a>
 
