@@ -1,10 +1,27 @@
+"use client";
+
+import { useState } from "react";
+
 type ContactModalProps = {
   isOpen: boolean;
   onClose: () => void;
 };
 
+const email = "pro.raphael.parmentier@gmail.com";
+
 export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
+  const [copied, setCopied] = useState(false);
+
   if (!isOpen) return null;
+
+  const copyEmail = async () => {
+    await navigator.clipboard.writeText(email);
+    setCopied(true);
+
+    window.setTimeout(() => {
+      setCopied(false);
+    }, 1800);
+  };
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 px-6 backdrop-blur-sm">
@@ -23,6 +40,8 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
               Open to AI engineering, data science, automation and consulting
               opportunities.
             </p>
+
+            <p className="mt-4 text-sm text-slate-500">{email}</p>
           </div>
 
           <button
@@ -34,13 +53,18 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
         </div>
 
         <div className="mt-8 flex flex-wrap gap-4">
-          <a
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=pro.raphael.parmentier@gmail.com&su=AI%20%2F%20Data%20Opportunity"
-            target="_blank"
-            rel="noreferrer"
+          <button
+            onClick={copyEmail}
             className="rounded-full bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-400"
-            >
-            Email me
+          >
+            {copied ? "Email copied" : "Copy email"}
+          </button>
+
+          <a
+            href={`mailto:${email}`}
+            className="rounded-full border border-slate-700 px-6 py-3 text-sm font-semibold text-slate-200 transition hover:border-orange-400 hover:text-orange-300"
+          >
+            Open email app
           </a>
 
           <a
