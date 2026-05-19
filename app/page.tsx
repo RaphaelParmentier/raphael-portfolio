@@ -12,7 +12,7 @@ export default function Home() {
           absolute inset-0
           bg-[linear-gradient(to_right,#1A1D24_1px,transparent_1px),linear-gradient(to_bottom,#1A1D24_1px,transparent_1px)]
           bg-[size:64px_64px]
-          opacity-20
+          opacity-15
         "
       />
 

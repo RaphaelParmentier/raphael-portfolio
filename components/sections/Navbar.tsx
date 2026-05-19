@@ -39,21 +39,20 @@ export default function Navbar() {
               text-[#F3F1EA]
             "
           >
-            RP / AI LAB
+            RP Systems
           </span>
         </div>
 
         {/* Navigation */}
         <nav className="hidden gap-8 md:flex">
           {[
-            "Projets",
-            "Expérience",
-            "Teaching",
-            "Lab",
-            "Contact",
+            { label: "Projects", href: "#projects" },
+            { label: "Experience", href: "#experience" },
+            { label: "Contact", href: "#contact" },
           ].map((item) => (
-            <button
-              key={item}
+            <a
+              key={item.label}
+              href={item.href}
               className="
                 text-sm
                 text-[#A7A29A]
@@ -61,8 +60,8 @@ export default function Navbar() {
                 hover:text-[#F3F1EA]
               "
             >
-              {item}
-            </button>
+              {item.label}
+            </a>
           ))}
         </nav>
       </div>

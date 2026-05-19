@@ -24,7 +24,7 @@ export default function Hero() {
   ];
 
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden px-6 py-24">
+    <section className="relative flex min-h-[85vh] items-center overflow-hidden px-6 py-24">
       <div className="mx-auto grid w-full max-w-7xl gap-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
         <div>
           <p className="mb-5 inline-flex rounded-full border border-orange-500/30 bg-orange-500/10 px-4 py-2 text-xs font-medium uppercase tracking-[0.25em] text-orange-300">
@@ -32,7 +32,7 @@ export default function Hero() {
           </p>
 
           <h1 className="max-w-4xl text-5xl font-semibold tracking-tight text-white md:text-7xl">
-            Designing AI-assisted analytical systems with scientific rigor.
+            Building production-oriented AI systems with scientific rigor.
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-400">
