@@ -22,14 +22,12 @@ export default function ProjectCard({
   status,
 }: ProjectCardProps) {
   return (
-    <div className="group relative overflow-hidden rounded-3xl border border-slate-800 bg-slate-950/60 p-8 transition duration-300 hover:border-orange-500/40 hover:bg-slate-900/80">
-      <div className="absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-100">
-        <div className="absolute -right-24 top-0 h-48 w-48 rounded-full bg-orange-500/10 blur-3xl" />
-      </div>
+    <article className="group relative overflow-hidden rounded-3xl border border-slate-800 bg-slate-950/70 p-8 transition duration-300 hover:border-orange-500/40 hover:bg-slate-900/80">
+      <div className="absolute -right-24 top-0 h-56 w-56 rounded-full bg-orange-500/10 blur-3xl transition duration-500 group-hover:bg-orange-500/20" />
 
       <div className="relative z-10">
         <div className="mb-6 flex items-center justify-between gap-4">
-          <span className="rounded-full border border-orange-500/20 bg-orange-500/10 px-3 py-1 text-xs font-medium text-orange-300">
+          <span className="rounded-full border border-orange-500/25 bg-orange-500/10 px-3 py-1 text-xs font-medium text-orange-300">
             {category}
           </span>
 
@@ -42,7 +40,7 @@ export default function ProjectCard({
           {title}
         </h3>
 
-        <p className="mt-4 max-w-2xl text-base leading-7 text-slate-400">
+        <p className="mt-4 max-w-3xl text-base leading-7 text-slate-400">
           {description}
         </p>
 
@@ -97,11 +95,11 @@ export default function ProjectCard({
               rel="noreferrer"
               className="rounded-full border border-slate-700 px-5 py-3 text-sm font-semibold text-slate-200 transition hover:border-orange-400 hover:text-orange-300"
             >
-              API Docs
+              FastAPI Docs
             </a>
           )}
         </div>
       </div>
-    </div>
+    </article>
   );
 }

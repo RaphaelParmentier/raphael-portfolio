@@ -4,98 +4,86 @@ import { motion } from "framer-motion";
 
 const experiences = [
   {
-    period: "2025 — Aujourd'hui",
-    title: "Machine Learning Engineering",
+    period: "Apr 2025 — Present",
+    title: "Machine Learning Engineer",
     company: "DataScientest / Mines Paris",
     description:
-      "Spécialisation en IA appliquée, engineering ML, automatisation et systèmes LLM.",
+      "Building production-oriented AI systems, ML workflows and deployed analytical applications.",
   },
   {
-    period: "2024 — Aujourd'hui",
-    title: "Enseignant Universitaire",
+    period: "Dec 2024 — Present",
+    title: "Lecturer",
     company: "Télécom SudParis",
     description:
-      "Cours et TP autour des statistiques, de la data science et du Big Data.",
+      "Delivering workshops and applied courses in statistics, Big Data and analytical workflows.",
   },
   {
-    period: "2021 — 2024",
-    title: "Biostatisticien Préclinique",
-    company: "Sanofi / GSK",
+    period: "Feb 2024 — Feb 2026",
+    title: "Optimization Analyst",
+    company: "Serebis",
     description:
-      "Analyses statistiques avancées dans des environnements R&D pharmaceutiques exigeants.",
+      "Designed internal automation and AI-assisted operational tools to streamline inventory, maintenance and reporting workflows.",
   },
   {
-    period: "2019 — 2021",
-    title: "Master Bioinformatique & Biostatistique",
-    company: "Université Paris-Saclay",
+    period: "Sep 2023 — Jan 2024",
+    title: "Preclinical Statistics Consultant",
+    company: "Sanofi",
     description:
-      "Formation en statistiques, modélisation, bioinformatique et analyse de données.",
+      "Delivered statistical validation and analytical review supporting decision-making in regulated pharmaceutical R&D programs.",
+  },
+  {
+    period: "Jul 2021 — Aug 2023",
+    title: "Preclinical Statistics Consultant",
+    company: "GSK",
+    description:
+      "Contributed to statistical analysis and interpretation for vaccine research programs in cross-functional scientific teams.",
   },
 ];
 
 export default function Experience() {
   return (
-    <section id="experience" className="relative z-10 px-6 py-32">
+    <section id="experience" className="relative z-10 px-6 py-28">
       <div className="mx-auto max-w-5xl">
-
         <div className="mb-20">
           <p className="text-sm uppercase tracking-[0.3em] text-[#E9792D]">
             Experience
           </p>
 
           <h2 className="mt-4 text-4xl font-bold text-[#F3F1EA]">
-            From Biostatistics to AI Engineering
+            From pharmaceutical statistics to AI engineering.
           </h2>
 
           <p className="mt-6 max-w-2xl text-[#8E8A84]">
-            Une trajectoire construite entre sciences du vivant,
-            statistiques avancées, ingénierie data et IA moderne.
+            A trajectory combining regulated R&D environments, statistical
+            modeling, automation workflows and production-oriented AI systems.
           </p>
         </div>
 
         <div className="relative">
-
-          {/* Vertical line */}
           <div className="absolute left-4 top-0 h-full w-px bg-[#2A2F3A]" />
 
           <div className="space-y-12">
             {experiences.map((exp, index) => (
               <motion.div
-                key={exp.title}
+                key={`${exp.title}-${exp.company}`}
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{
                   duration: 0.5,
-                  delay: index * 0.1,
+                  delay: index * 0.08,
                 }}
                 className="relative pl-16"
               >
-                {/* Dot */}
-                <div
-                  className="
-                    absolute
-                    left-[9px]
-                    top-2
-                    h-3
-                    w-3
-                    rounded-full
-                    bg-[#E9792D]
-                    shadow-[0_0_20px_rgba(233,121,45,0.8)]
-                  "
-                />
+                <div className="absolute left-[9px] top-2 h-3 w-3 rounded-full bg-[#E9792D] shadow-[0_0_20px_rgba(233,121,45,0.8)]" />
 
-                <p className="text-sm text-[#E9792D]">
-                  {exp.period}
-                </p>
+                <p className="text-sm text-[#E9792D]">{exp.period}</p>
 
                 <h3 className="mt-2 text-2xl font-semibold text-[#F3F1EA]">
                   {exp.title}
                 </h3>
 
-                <p className="mt-1 text-[#C6C1B8]">
-                  {exp.company}
-                </p>
+                <p className="mt-1 text-[#C6C1B8]">{exp.company}</p>
 
                 <p className="mt-4 leading-relaxed text-[#8E8A84]">
                   {exp.description}
@@ -103,7 +91,6 @@ export default function Experience() {
               </motion.div>
             ))}
           </div>
-
         </div>
       </div>
     </section>

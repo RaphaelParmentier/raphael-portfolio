@@ -1,11 +1,11 @@
 export const projects = [
   {
-    title: "AI Data Report Generator",
+    title: "AI Data Quality Auditor",
 
-    category: "Industrial AI · Data Quality Platform",
+    category: "AI · Data Quality Platform",
 
     description:
-      "Full-stack AI-powered dataset inspection platform designed to transform raw CSV or Excel files into actionable quality diagnostics, interactive visual analysis and production-oriented reporting workflows.",
+      "Production-oriented AI platform for automated dataset validation, inspection and reporting workflows. Built to turn raw CSV or Excel files into actionable quality diagnostics and analytical outputs.",
 
     stack: [
       "Next.js",
@@ -13,18 +13,20 @@ export const projects = [
       "FastAPI",
       "Python",
       "Pandas",
+      "Gemini",
       "Recharts",
       "TailwindCSS",
-      "Automation",
+      "Vercel",
+      "Render",
     ],
 
     highlights: [
-      "Interactive dataset inspection dashboard",
-      "Automated data quality scoring",
-      "Missing values & duplicate detection",
-      "Dynamic visual analytics",
-      "CSV & Excel parsing workflows",
-      "Full-stack deployment with Vercel + Render",
+      "AI-assisted reporting workflows and automated diagnostics",
+      "Automated data quality scoring for faster dataset review",
+      "Missing values, duplicates and structural issue detection",
+      "Dynamic visual analytics for exploratory data inspection",
+      "CSV and Excel parsing workflows",
+      "Full-stack deployment with Vercel frontend and Render backend API",
     ],
 
     github:
