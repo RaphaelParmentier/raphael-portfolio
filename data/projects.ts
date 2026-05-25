@@ -40,4 +40,30 @@ export const projects = [
 
     status: "Live",
   },
+
+  {
+    title: "Teaching Brain Lab",
+    category: "Interactive Education · Data & AI Teaching System",
+    description:
+      "Interactive teaching system designed to showcase applied Data Science, Statistics, Machine Learning and AI education through realistic missions and student deliverables.",
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "TailwindCSS",
+      "Framer Motion",
+      "Data Education",
+      "RMarkdown",
+      "AI Workflows",
+    ],
+    highlights: [
+      "Interactive knowledge graph for teaching pathways",
+      "Applied learning missions in data, statistics, ML and AI",
+      "Realistic student output previews",
+      "RMarkdown-style deliverables and analytical workflows",
+      "Premium portfolio storytelling for education expertise",
+    ],
+    github: "https://github.com/RaphaelParmentier/teaching-brain-lab",
+    live: "TON_URL_VERCEL_OU_DOMAINE_TEACHING",
+    status: "Live",
+  },
 ];

@@ -44,6 +44,14 @@ export default function Navbar() {
           </a>
 
           <a
+            href="https://teaching.raphaelparmentier.dev"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Teaching Lab
+          </a>
+
+          <a
             href="#experience"
             className="
               hidden
