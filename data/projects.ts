@@ -63,7 +63,7 @@ export const projects = [
       "Premium portfolio storytelling for education expertise",
     ],
     github: "https://github.com/RaphaelParmentier/teaching-brain-lab",
-    live: "TON_URL_VERCEL_OU_DOMAINE_TEACHING",
+    live: "https://teaching.raphaelparmentier.dev",
     status: "Live",
   },
 ];
