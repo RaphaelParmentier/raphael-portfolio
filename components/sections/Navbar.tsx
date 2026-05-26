@@ -16,10 +16,10 @@ export default function Navbar() {
   return (
     <>
       <header className="fixed top-0 z-50 w-full border-b border-white/5 bg-[#08090B]/80 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-[96rem] items-center justify-between px-5 py-4 sm:px-6 sm:py-5">
+        <div className="mx-auto flex max-w-[112rem] items-center justify-between px-5 py-4 sm:px-6 sm:py-5 2xl:px-10">
           <a
             href="#top"
-            className="flex shrink-0 items-center gap-3 whitespace-nowrap text-xs font-semibold tracking-[0.28em] text-[#F3F1EA] sm:text-sm"
+            className="flex shrink-0 items-center gap-3 whitespace-nowrap text-xs font-semibold tracking-[0.28em] text-[#F3F1EA] sm:text-sm 2xl:text-base"
           >
             <div className="h-2 w-2 rounded-full bg-[#E9792D] shadow-[0_0_18px_rgba(233,121,45,0.8)]" />
             RP SYSTEMS

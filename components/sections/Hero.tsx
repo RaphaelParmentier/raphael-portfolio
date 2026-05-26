@@ -5,8 +5,8 @@ import { journeyPreview } from "@/data/journey";
 
 export default function Hero() {
   return (
-    <section className="relative z-10 flex min-h-[92vh] items-center overflow-hidden px-5 py-24 sm:px-6 lg:py-28">
-      <div className="mx-auto grid w-full max-w-[96rem] gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+    <section className="relative z-10 flex min-h-[100svh] items-center overflow-hidden px-5 py-28 sm:px-6 lg:py-32 2xl:py-40">
+      <div className="mx-auto grid w-full max-w-[112rem] gap-14 lg:grid-cols-[1.08fr_0.92fr] lg:items-center 2xl:gap-24">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -16,7 +16,7 @@ export default function Hero() {
             AI Engineer & Data Scientist
           </p>
 
-          <h1 className="max-w-5xl text-4xl font-semibold tracking-[-0.06em] text-white sm:text-6xl lg:text-7xl 2xl:text-8xl">
+          <h1 className="max-w-6xl text-5xl font-semibold tracking-[-0.065em] text-white sm:text-6xl lg:text-7xl xl:text-8xl 2xl:text-[6.6rem] 2xl:leading-[0.88]">
             Turning complex information into actionable decisions.
           </h1>
 
@@ -26,7 +26,7 @@ export default function Hero() {
             that help people understand, decide and act.
           </p>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+          <div className="relative overflow-hidden rounded-[2rem] border border-slate-800 bg-slate-950/80 p-5 2xl:p-7 shadow-2xl shadow-orange-500/10 backdrop-blur sm:p-7">
             <a
               href="#work"
               className="inline-flex justify-center rounded-full bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-400 focus:outline-none focus:ring-2 focus:ring-orange-300 focus:ring-offset-2 focus:ring-offset-[#08090B]"
@@ -80,7 +80,7 @@ export default function Hero() {
                 <a
                   key={item}
                   href="#journey"
-                  className="group grid grid-cols-[auto_1fr] gap-4 rounded-2xl border border-slate-800 bg-slate-900/45 p-4 transition hover:border-orange-500/40 hover:bg-slate-900/80"
+                  className="group grid grid-cols-[auto_1fr] gap-4 rounded-2xl border border-slate-800 bg-slate-900/45 p-4 transition hover:border-orange-500/40 hover:bg-slate-900/80 xl:p-5 2xl:p-6"
                 >
                   <div className="flex flex-col items-center">
                     <div className="flex h-9 w-9 items-center justify-center rounded-full border border-orange-500/30 bg-orange-500/10 text-xs font-semibold text-orange-200 shadow-[0_0_24px_rgba(233,121,45,0.18)]">
