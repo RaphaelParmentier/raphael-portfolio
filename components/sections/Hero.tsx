@@ -3,16 +3,24 @@
 import { motion } from "framer-motion";
 import { journeyPreview } from "@/data/journey";
 
+const journeyDescriptions = [
+  "Biology, observation and experimental data",
+  "Statistics, bioinformatics and uncertainty",
+  "Serebis, processes and business workflows",
+  "AI products, automation and deployment",
+  "Teaching, clarity and learning systems",
+];
+
 export default function Hero() {
   return (
     <section className="relative z-10 flex min-h-[100svh] items-center overflow-hidden px-5 py-28 sm:px-6 lg:py-32 2xl:py-40">
-      <div className="mx-auto grid w-full max-w-[112rem] gap-14 lg:grid-cols-[1.08fr_0.92fr] lg:items-center 2xl:gap-24">
+      <div className="mx-auto grid w-full max-w-[112rem] gap-14 lg:grid-cols-[1.12fr_0.88fr] lg:items-center 2xl:gap-24">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
-          <p className="mb-5 inline-flex rounded-full border border-orange-500/30 bg-orange-500/10 px-4 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.24em] text-orange-300 sm:text-xs">
+          <p className="mb-5 inline-flex rounded-full border border-orange-500/30 bg-orange-500/10 px-4 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.24em] text-orange-300 sm:text-xs 2xl:text-sm">
             AI Engineer & Data Scientist
           </p>
 
@@ -20,34 +28,49 @@ export default function Hero() {
             Turning complex information into actionable decisions.
           </h1>
 
-          <p className="mt-6 max-w-3xl text-base leading-8 text-slate-400 sm:text-lg 2xl:text-xl 2xl:leading-9">
+          <div className="mt-6 flex flex-wrap gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-slate-500 sm:text-sm 2xl:text-base">
+            <span>Scientist</span>
+            <span className="text-orange-400">→</span>
+            <span>Statistician</span>
+            <span className="text-orange-400">→</span>
+            <span>Builder</span>
+            <span className="text-orange-400">→</span>
+            <span>AI Engineer</span>
+            <span className="text-orange-400">→</span>
+            <span>Teacher</span>
+          </div>
+
+          <p className="mt-7 max-w-4xl text-base leading-8 text-slate-400 sm:text-lg xl:text-xl xl:leading-9 2xl:text-[1.35rem] 2xl:leading-10">
             From biological research and pharmaceutical R&D to operational
             automation, AI engineering and higher education, I design systems
             that help people understand, decide and act.
           </p>
 
-          <div className="relative overflow-hidden rounded-[2rem] border border-slate-800 bg-slate-950/80 p-5 2xl:p-7 shadow-2xl shadow-orange-500/10 backdrop-blur sm:p-7">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <a
               href="#work"
-              className="inline-flex justify-center rounded-full bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-400 focus:outline-none focus:ring-2 focus:ring-orange-300 focus:ring-offset-2 focus:ring-offset-[#08090B]"
+              className="inline-flex justify-center rounded-full bg-orange-500 px-7 py-3.5 text-sm font-semibold text-white shadow-[0_0_30px_rgba(249,115,22,0.25)] transition hover:bg-orange-400 hover:shadow-[0_0_42px_rgba(249,115,22,0.35)] focus:outline-none focus:ring-2 focus:ring-orange-300 focus:ring-offset-2 focus:ring-offset-[#08090B] 2xl:px-8 2xl:py-4 2xl:text-base"
             >
-              Explore my work
+              Explore projects
             </a>
 
             <a
               href="/Raphael_Parmentier_CV_EN.pdf"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex justify-center rounded-full border border-slate-700 px-6 py-3 text-sm font-semibold text-slate-200 transition hover:border-orange-400 hover:text-orange-300 focus:outline-none focus:ring-2 focus:ring-orange-300 focus:ring-offset-2 focus:ring-offset-[#08090B]"
+              className="inline-flex justify-center rounded-full border border-slate-700 bg-slate-950/60 px-7 py-3.5 text-sm font-semibold text-slate-200 transition hover:border-orange-400 hover:text-orange-300 focus:outline-none focus:ring-2 focus:ring-orange-300 focus:ring-offset-2 focus:ring-offset-[#08090B] 2xl:px-8 2xl:py-4 2xl:text-base"
             >
               Download CV
             </a>
           </div>
 
-          <div className="mt-8 max-w-3xl rounded-2xl border border-slate-800 bg-slate-950/50 p-4 text-sm leading-6 text-slate-400 sm:p-5 2xl:text-base 2xl:leading-7">
-            <span className="font-medium text-slate-200">Core thread:</span>{" "}
-            scientific reasoning, operational pragmatism and teaching clarity
-            applied to AI-powered data products.
+          <div className="mt-8 max-w-4xl rounded-2xl border border-orange-500/20 bg-orange-500/[0.07] p-5 text-sm leading-6 text-orange-50 shadow-[0_0_34px_rgba(249,115,22,0.08)] sm:p-6 2xl:text-base 2xl:leading-7">
+            <p className="font-medium text-white">
+              What connects biology, statistics, automation, AI engineering and teaching?
+            </p>
+            <p className="mt-2 text-orange-100/80">
+              Building practical systems that help people make better decisions.
+            </p>
           </div>
         </motion.div>
 
@@ -59,18 +82,18 @@ export default function Hero() {
         >
           <div className="absolute -inset-4 rounded-[2rem] bg-orange-500/10 blur-3xl" />
 
-          <div className="relative overflow-hidden rounded-[2rem] border border-slate-800 bg-slate-950/80 p-5 2xl:p-7 shadow-2xl shadow-orange-500/10 backdrop-blur sm:p-7">
+          <div className="relative overflow-hidden rounded-[2rem] border border-slate-800 bg-slate-950/80 p-5 shadow-2xl shadow-orange-500/10 backdrop-blur sm:p-7 xl:p-8 2xl:p-10">
             <div className="mb-6 flex flex-col gap-3 border-b border-slate-800 pb-5 sm:flex-row sm:items-center sm:justify-between">
               <div>
-                <p className="text-xs uppercase tracking-[0.28em] text-orange-300">
+                <p className="text-xs uppercase tracking-[0.28em] text-orange-300 2xl:text-sm">
                   Career Journey
                 </p>
-                <p className="mt-2 text-sm text-slate-500">
+                <p className="mt-2 text-sm text-slate-500 2xl:text-base">
                   The logic behind the profile
                 </p>
               </div>
 
-              <span className="w-fit rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 text-xs text-emerald-300">
+              <span className="w-fit whitespace-nowrap rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 text-xs text-emerald-300 2xl:text-sm">
                 Open to roles & missions
               </span>
             </div>
@@ -83,24 +106,20 @@ export default function Hero() {
                   className="group grid grid-cols-[auto_1fr] gap-4 rounded-2xl border border-slate-800 bg-slate-900/45 p-4 transition hover:border-orange-500/40 hover:bg-slate-900/80 xl:p-5 2xl:p-6"
                 >
                   <div className="flex flex-col items-center">
-                    <div className="flex h-9 w-9 items-center justify-center rounded-full border border-orange-500/30 bg-orange-500/10 text-xs font-semibold text-orange-200 shadow-[0_0_24px_rgba(233,121,45,0.18)]">
+                    <div className="flex h-9 w-9 items-center justify-center rounded-full border border-orange-500/30 bg-orange-500/10 text-xs font-semibold text-orange-200 shadow-[0_0_24px_rgba(233,121,45,0.18)] 2xl:h-11 2xl:w-11 2xl:text-sm">
                       {String(index + 1).padStart(2, "0")}
                     </div>
                     {index < journeyPreview.length - 1 && (
-                      <div className="mt-2 h-8 w-px bg-gradient-to-b from-orange-500/50 to-slate-800" />
+                      <div className="mt-2 h-8 w-px bg-gradient-to-b from-orange-500/50 to-slate-800 2xl:h-10" />
                     )}
                   </div>
 
                   <div className="pt-1">
-                    <p className="text-sm font-medium text-slate-100 2xl:text-base transition group-hover:text-orange-100">
+                    <p className="text-sm font-semibold text-slate-100 transition group-hover:text-orange-100 2xl:text-lg">
                       {item}
                     </p>
-                    <p className="mt-1 text-xs leading-5 text-slate-500 2xl:text-sm 2xl:leading-6">
-                      {index === 0 && "Biology, observation and experimental data"}
-                      {index === 1 && "Statistics, bioinformatics and uncertainty"}
-                      {index === 2 && "Serebis, processes and business workflows"}
-                      {index === 3 && "AI products, automation and deployment"}
-                      {index === 4 && "Teaching, clarity and learning systems"}
+                    <p className="mt-1 text-xs leading-5 text-slate-500 2xl:text-base 2xl:leading-7">
+                      {journeyDescriptions[index]}
                     </p>
                   </div>
                 </a>
