@@ -1,3 +1,8 @@
+"use client";
+
+const email = "pro.raphael.parmentier@gmail.com";
+const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}`;
+
 const navigationLinks = [
   { label: "Journey Map", href: "#journey" },
   { label: "Teaching", href: "#teaching" },
@@ -109,11 +114,23 @@ export default function Footer() {
 
             <div className="mt-6 flex flex-wrap gap-3">
               <a
-                href="mailto:pro.raphael.parmentier@gmail.com"
+                href={gmailComposeUrl}
+                target="_blank"
+                rel="noreferrer"
                 className="rounded-full border border-slate-700 px-5 py-3 text-sm font-semibold text-slate-200 transition hover:border-orange-400 hover:text-orange-300"
               >
-                Email
+                Open Gmail
               </a>
+
+              <button
+                type="button"
+                onClick={async () => {
+                  await navigator.clipboard.writeText(email);
+                }}
+                className="rounded-full border border-slate-700 px-5 py-3 text-sm font-semibold text-slate-200 transition hover:border-orange-400 hover:text-orange-300"
+              >
+                Copy email
+              </button>
 
               <a
                 href="https://www.linkedin.com/in/raphaelparmentier/"
@@ -122,15 +139,6 @@ export default function Footer() {
                 className="rounded-full border border-slate-700 px-5 py-3 text-sm font-semibold text-slate-200 transition hover:border-orange-400 hover:text-orange-300"
               >
                 LinkedIn
-              </a>
-
-              <a
-                href="https://github.com/RaphaelParmentier"
-                target="_blank"
-                rel="noreferrer"
-                className="rounded-full border border-slate-700 px-5 py-3 text-sm font-semibold text-slate-200 transition hover:border-orange-400 hover:text-orange-300"
-              >
-                GitHub
               </a>
             </div>
           </div>
