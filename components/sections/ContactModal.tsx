@@ -8,6 +8,7 @@ type ContactModalProps = {
 };
 
 const email = "pro.raphael.parmentier@gmail.com";
+const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}`;
 
 export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
   const [copied, setCopied] = useState(false);
@@ -55,16 +56,18 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
           <button
             onClick={copyEmail}
-            className="rounded-full bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-400"
+            className="rounded-full bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-400 focus:outline-none focus:ring-2 focus:ring-orange-300 focus:ring-offset-2 focus:ring-offset-slate-950"
           >
             {copied ? "Email copied" : "Copy email"}
           </button>
 
           <a
-            href={`mailto:${email}`}
+            href={gmailComposeUrl}
+            target="_blank"
+            rel="noreferrer"
             className="inline-flex justify-center rounded-full border border-slate-700 px-6 py-3 text-sm font-semibold text-slate-200 transition hover:border-orange-400 hover:text-orange-300"
           >
-            Open mail client
+            Open Gmail
           </a>
 
           <a

@@ -14,18 +14,4 @@ export const productSystems = [
       { label: "API Docs", href: "https://ai-data-report-generator-zn71.onrender.com/docs" },
     ],
   },
-  {
-    title: "Teaching Brain Lab",
-    status: "Live",
-    category: "Interactive Education · Knowledge Design",
-    problem: "Technical education often relies on static slides that do not reveal how concepts connect.",
-    solution:
-      "An interactive teaching system built around missions, knowledge pathways and realistic student deliverables in Data and AI.",
-    workflow: ["Concepts", "Missions", "Practice", "Deliverables", "Learning Path"],
-    stack: ["Next.js", "TypeScript", "Framer Motion", "TailwindCSS", "Learning UX"],
-    links: [
-      { label: "Explore Lab", href: "https://teaching.raphaelparmentier.dev", primary: true },
-      { label: "GitHub", href: "https://github.com/RaphaelParmentier/teaching-brain-lab" },
-    ],
-  },
 ];

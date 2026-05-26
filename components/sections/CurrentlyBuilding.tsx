@@ -3,7 +3,7 @@ import SectionHeader from "@/components/ui/SectionHeader";
 
 export default function CurrentlyBuilding() {
   return (
-    <section id="building" className="relative z-10 mx-auto max-w-7xl px-5 py-20 sm:px-6 lg:py-28">
+    <section id="building" className="relative z-10 mx-auto max-w-[96rem] px-5 py-20 sm:px-6 lg:py-28">
       <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
         <SectionHeader
           eyebrow="Currently Building"
@@ -19,7 +19,7 @@ export default function CurrentlyBuilding() {
                 <span className="rounded-full border border-orange-500/25 bg-orange-500/10 px-3 py-1 text-xs font-medium text-orange-300">
                   {currentlyBuilding.status}
                 </span>
-                <h3 className="mt-4 text-3xl font-semibold tracking-tight text-white">
+                <h3 className="mt-4 text-3xl font-semibold tracking-tight text-white 2xl:text-5xl">
                   {currentlyBuilding.title}
                 </h3>
               </div>

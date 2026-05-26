@@ -1,39 +1,61 @@
-# V2 Premium Implementation Notes
+# Portfolio V2 Premium — Implementation Notes
 
-This version implements the portfolio V2 direction defined in `docs/portfolio-v2-blueprint.md`.
+## Included in this version
 
-## Main changes
+This package contains the V2 premium portfolio iteration with the following updates:
 
-- Rebuilt the Hero around the narrative: “Turning complex information into actionable decisions.”
-- Removed generic AI/data skill badges and KPI cards.
-- Added a Journey Map section with five identities: Scientist, Statistician, Builder, AI Engineer, Teacher.
-- Added a premium Teaching & Knowledge Design section featuring Teaching Brain Lab.
-- Replaced the old project framing with a new “What I Build” product-oriented section.
-- Added a “Currently Building” section for Career Intelligence Assistant.
-- Updated the navbar anchors and contact messaging.
-- Updated metadata and global CSS for a darker, cleaner product-like foundation.
+- Mobile-first premium homepage structure.
+- New narrative Hero section centered on decision-oriented AI/data work.
+- Career Journey Card replacing generic KPI badges.
+- Interactive Journey Map built around five identities: Scientist, Statistician, Builder, AI Engineer, Teacher.
+- Dedicated Teaching & Knowledge Design section.
+- Teaching Brain Lab showcased with the current interface screenshot instead of an abstract placeholder.
+- What I Build section focused on deployed technical systems.
+- Teaching Brain Lab removed from the product-card list to avoid repetition; it is now treated as a distinct teaching identity/product section.
+- Currently Building section for Career Intelligence Assistant.
+- Improved contact UX: copy email and Gmail compose links instead of relying only on mailto.
+- Navbar button wrapping fixed with whitespace protection.
+- Larger 2xl typography and wider containers for large desktop / 27-inch displays.
 
-## Validation performed
+## Why Teaching Brain Lab is separate from What I Build
 
-- `npm run lint`: passed.
-- `npx tsc --noEmit`: passed.
+Teaching Brain Lab is still a project, but it is more than a standard technical demo. It represents the teaching and knowledge-design side of the profile. Keeping it as a dedicated section avoids repetition and makes the portfolio story clearer:
 
-`npm run build` could not complete in this sandbox because Next tried to download the SWC package and the npm registry setting is protected here. Run it locally after `npm install`.
+- Teaching section: educational identity and learning-system design.
+- What I Build: deployed technical AI/data products.
+- Currently Building: future product direction.
 
-## Suggested local test
+## Local test commands
 
 ```bash
 npm install
 npm run lint
 npx tsc --noEmit
-npm run dev
 npm run build
+npm run dev
 ```
 
-Check responsive views:
+## Validation performed here
+
+- `npm run lint`: passed.
+- `npx tsc --noEmit`: passed.
+- `npm run build`: blocked only because the sandbox cannot fetch Google-hosted `next/font` files for Geist / Geist Mono. This should work on a normal connected environment such as Vercel or a local machine with internet access.
+
+## Manual responsive checks to perform
+
+Test at:
 
 - 390px
 - 430px
 - 768px
 - 1024px
 - 1440px
+- 2560px / 27-inch monitor
+
+Priority checks:
+
+- No horizontal overflow.
+- Navbar contact button stays on one line.
+- Hero text scales correctly on large desktop.
+- Teaching Brain Lab screenshot remains readable and framed correctly.
+- Contact buttons work: Copy email and Open Gmail.

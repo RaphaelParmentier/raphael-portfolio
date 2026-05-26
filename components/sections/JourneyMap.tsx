@@ -10,7 +10,7 @@ export default function JourneyMap() {
   const activeStep = journeySteps.find((step) => step.id === activeId) ?? journeySteps[0];
 
   return (
-    <section id="journey" className="relative z-10 mx-auto max-w-7xl px-5 py-20 sm:px-6 lg:py-28">
+    <section id="journey" className="relative z-10 mx-auto max-w-[96rem] px-5 py-20 sm:px-6 lg:py-28">
       <SectionHeader
         eyebrow="Journey Map"
         title="A trajectory built around evidence, systems and clarity."
@@ -49,7 +49,7 @@ export default function JourneyMap() {
                       <span className="block text-base font-semibold text-white">
                         {step.title}
                       </span>
-                      <span className="mt-1 block text-xs leading-5 text-slate-500">
+                      <span className="mt-1 block text-xs leading-5 text-slate-500 2xl:text-sm 2xl:leading-6">
                         {step.subtitle}
                       </span>
                     </span>
@@ -77,7 +77,7 @@ export default function JourneyMap() {
                   <p className="text-xs uppercase tracking-[0.28em] text-orange-300">
                     {activeStep.eyebrow}
                   </p>
-                  <h3 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+                  <h3 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl 2xl:text-5xl">
                     {activeStep.title}
                   </h3>
                   <p className="mt-2 text-sm text-slate-500">{activeStep.period}</p>
@@ -88,7 +88,7 @@ export default function JourneyMap() {
                 </span>
               </div>
 
-              <p className="mt-6 text-base leading-8 text-slate-300 sm:text-lg">
+              <p className="mt-6 text-base leading-8 text-slate-300 sm:text-lg 2xl:text-xl 2xl:leading-9">
                 {activeStep.narrative}
               </p>
 

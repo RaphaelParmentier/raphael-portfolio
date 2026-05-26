@@ -3,11 +3,11 @@ import SectionHeader from "@/components/ui/SectionHeader";
 
 export default function Products() {
   return (
-    <section id="work" className="relative z-10 mx-auto max-w-7xl px-5 py-20 sm:px-6 lg:py-28">
+    <section id="work" className="relative z-10 mx-auto max-w-[96rem] px-5 py-20 sm:px-6 lg:py-28">
       <SectionHeader
         eyebrow="What I Build"
-        title="Products and systems, not isolated demos."
-        description="Each project is designed as a practical system: a problem, a workflow, an interface and a decision-support outcome."
+        title="Production systems, not isolated demos."
+        description="This section focuses on deployed technical products. Teaching Brain Lab is presented separately above because it is both a project and a core part of the teaching identity."
       />
 
       <div className="mt-10 grid gap-6">
@@ -30,7 +30,7 @@ export default function Products() {
                   </span>
                 </div>
 
-                <h3 className="mt-6 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+                <h3 className="mt-6 text-3xl font-semibold tracking-tight text-white sm:text-4xl 2xl:text-5xl">
                   {product.title}
                 </h3>
 

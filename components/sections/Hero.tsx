@@ -6,7 +6,7 @@ import { journeyPreview } from "@/data/journey";
 export default function Hero() {
   return (
     <section className="relative z-10 flex min-h-[92vh] items-center overflow-hidden px-5 py-24 sm:px-6 lg:py-28">
-      <div className="mx-auto grid w-full max-w-7xl gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+      <div className="mx-auto grid w-full max-w-[96rem] gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -16,11 +16,11 @@ export default function Hero() {
             AI Engineer & Data Scientist
           </p>
 
-          <h1 className="max-w-4xl text-4xl font-semibold tracking-[-0.06em] text-white sm:text-6xl lg:text-7xl">
+          <h1 className="max-w-5xl text-4xl font-semibold tracking-[-0.06em] text-white sm:text-6xl lg:text-7xl 2xl:text-8xl">
             Turning complex information into actionable decisions.
           </h1>
 
-          <p className="mt-6 max-w-2xl text-base leading-8 text-slate-400 sm:text-lg">
+          <p className="mt-6 max-w-3xl text-base leading-8 text-slate-400 sm:text-lg 2xl:text-xl 2xl:leading-9">
             From biological research and pharmaceutical R&D to operational
             automation, AI engineering and higher education, I design systems
             that help people understand, decide and act.
@@ -44,7 +44,7 @@ export default function Hero() {
             </a>
           </div>
 
-          <div className="mt-8 max-w-2xl rounded-2xl border border-slate-800 bg-slate-950/50 p-4 text-sm leading-6 text-slate-400 sm:p-5">
+          <div className="mt-8 max-w-3xl rounded-2xl border border-slate-800 bg-slate-950/50 p-4 text-sm leading-6 text-slate-400 sm:p-5 2xl:text-base 2xl:leading-7">
             <span className="font-medium text-slate-200">Core thread:</span>{" "}
             scientific reasoning, operational pragmatism and teaching clarity
             applied to AI-powered data products.
@@ -59,7 +59,7 @@ export default function Hero() {
         >
           <div className="absolute -inset-4 rounded-[2rem] bg-orange-500/10 blur-3xl" />
 
-          <div className="relative overflow-hidden rounded-[2rem] border border-slate-800 bg-slate-950/80 p-5 shadow-2xl shadow-orange-500/10 backdrop-blur sm:p-7">
+          <div className="relative overflow-hidden rounded-[2rem] border border-slate-800 bg-slate-950/80 p-5 2xl:p-7 shadow-2xl shadow-orange-500/10 backdrop-blur sm:p-7">
             <div className="mb-6 flex flex-col gap-3 border-b border-slate-800 pb-5 sm:flex-row sm:items-center sm:justify-between">
               <div>
                 <p className="text-xs uppercase tracking-[0.28em] text-orange-300">
@@ -92,10 +92,10 @@ export default function Hero() {
                   </div>
 
                   <div className="pt-1">
-                    <p className="text-sm font-medium text-slate-100 transition group-hover:text-orange-100">
+                    <p className="text-sm font-medium text-slate-100 2xl:text-base transition group-hover:text-orange-100">
                       {item}
                     </p>
-                    <p className="mt-1 text-xs leading-5 text-slate-500">
+                    <p className="mt-1 text-xs leading-5 text-slate-500 2xl:text-sm 2xl:leading-6">
                       {index === 0 && "Biology, observation and experimental data"}
                       {index === 1 && "Statistics, bioinformatics and uncertainty"}
                       {index === 2 && "Serebis, processes and business workflows"}
