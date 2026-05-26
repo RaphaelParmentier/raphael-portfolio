@@ -14,20 +14,15 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.raphaelparmentier.dev"),
-
   title: "Raphaël Parmentier | AI Engineer & Data Scientist",
-
   description:
-    "AI Engineer & Data Scientist specializing in AI systems, automation and data applications.",
-
+    "AI Engineer & Data Scientist building practical AI systems, automation workflows and teaching experiences that transform complex information into actionable decisions.",
   openGraph: {
-    title: "Raphaël Parmentier",
+    title: "Raphaël Parmentier | AI Engineer & Data Scientist",
     description:
-      "AI Engineer & Data Scientist specializing in AI systems, automation and data applications.",
-
+      "From biological research and pharmaceutical R&D to operational automation, AI engineering and higher education.",
     url: "https://www.raphaelparmentier.dev",
     siteName: "Raphaël Parmentier",
-
     images: [
       {
         url: "/images/og-portfolio.jpg",
@@ -36,16 +31,14 @@ export const metadata: Metadata = {
         alt: "Raphaël Parmentier Portfolio",
       },
     ],
-
     locale: "en_US",
     type: "website",
   },
-
   twitter: {
     card: "summary_large_image",
-    title: "Raphaël Parmentier",
+    title: "Raphaël Parmentier | AI Engineer & Data Scientist",
     description:
-      "AI Engineer & Data Scientist specializing in AI systems, automation and data applications.",
+      "AI systems, automation workflows and teaching experiences for decision-oriented data work.",
     images: ["/images/og-portfolio.jpg"],
   },
 };
@@ -57,9 +50,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
     </html>
