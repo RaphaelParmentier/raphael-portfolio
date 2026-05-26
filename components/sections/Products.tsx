@@ -3,52 +3,64 @@ import SectionHeader from "@/components/ui/SectionHeader";
 
 export default function Products() {
   return (
-    <section id="work" className="relative z-10 mx-auto max-w-[96rem] px-5 py-20 sm:px-6 lg:py-28">
+    <section
+      id="work"
+      className="relative z-10 mx-auto max-w-[112rem] px-5 py-24 sm:px-6 lg:py-32 2xl:px-10 2xl:py-40"
+    >
       <SectionHeader
         eyebrow="What I Build"
         title="Production systems, not isolated demos."
-        description="This section focuses on deployed technical products. Teaching Brain Lab is presented separately above because it is both a project and a core part of the teaching identity."
+        description="This section focuses on deployed technical products: AI-powered workflows, analytical applications and decision-support systems built to solve concrete problems."
       />
 
-      <div className="mt-10 grid gap-6">
+      <div className="mt-12 grid gap-8 2xl:mt-16">
         {productSystems.map((product) => (
           <article
             key={product.title}
-            className="group relative overflow-hidden rounded-[2rem] border border-slate-800 bg-slate-950/70 p-5 shadow-2xl shadow-orange-500/5 transition duration-300 hover:border-orange-500/35 hover:bg-slate-900/80 sm:p-7 lg:p-8"
+            className="group relative overflow-hidden rounded-[2.5rem] border border-slate-800 bg-slate-950/75 p-5 shadow-2xl shadow-orange-500/5 transition duration-300 hover:border-orange-500/35 hover:bg-slate-900/80 sm:p-7 lg:p-10 2xl:p-12"
           >
-            <div className="absolute -right-20 top-0 h-64 w-64 rounded-full bg-orange-500/10 blur-3xl transition duration-500 group-hover:bg-orange-500/15" />
+            <div className="absolute -right-24 top-0 h-80 w-80 rounded-full bg-orange-500/10 blur-3xl transition duration-500 group-hover:bg-orange-500/15" />
+            <div className="absolute bottom-[-10rem] left-1/3 h-72 w-72 rounded-full bg-sky-500/5 blur-3xl" />
 
-            <div className="relative z-10 grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+            <div className="relative z-10 grid gap-10 xl:grid-cols-[0.9fr_1.1fr] xl:items-start 2xl:gap-14">
               <div>
-                <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between lg:flex-col lg:items-start">
-                  <span className="w-fit rounded-full border border-orange-500/25 bg-orange-500/10 px-3 py-1 text-xs font-medium text-orange-300">
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between xl:flex-col xl:items-start">
+                  <span className="w-fit rounded-full border border-orange-500/25 bg-orange-500/10 px-3 py-1 text-xs font-medium text-orange-300 2xl:text-sm">
                     {product.category}
                   </span>
 
-                  <span className="w-fit rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 text-xs text-emerald-300">
+                  <span className="w-fit rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 text-xs text-emerald-300 2xl:text-sm">
                     {product.status}
                   </span>
                 </div>
 
-                <h3 className="mt-6 text-3xl font-semibold tracking-tight text-white sm:text-4xl 2xl:text-5xl">
+                <h3 className="mt-6 max-w-4xl text-4xl font-semibold tracking-[-0.04em] text-white sm:text-5xl 2xl:text-[4.5rem] 2xl:leading-[0.95]">
                   {product.title}
                 </h3>
 
-                <div className="mt-6 grid gap-4">
-                  <div className="rounded-2xl border border-slate-800 bg-slate-900/45 p-4">
-                    <p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-500">
+                <p className="mt-6 max-w-4xl text-lg leading-9 text-slate-400 xl:text-xl xl:leading-10 2xl:text-2xl 2xl:leading-[1.6]">
+                  A deployed full-stack system designed to turn raw files into
+                  structured diagnostics, quality scores and AI-assisted
+                  analytical reports.
+                </p>
+
+                <div className="mt-8 grid gap-4 2xl:mt-10 2xl:gap-5">
+                  <div className="rounded-2xl border border-slate-800 bg-slate-900/45 p-5 2xl:p-6">
+                    <p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-500 2xl:text-sm">
                       Problem
                     </p>
-                    <p className="mt-3 text-sm leading-7 text-slate-300 sm:text-base">
+
+                    <p className="mt-3 text-base leading-8 text-slate-300 2xl:text-lg 2xl:leading-9">
                       {product.problem}
                     </p>
                   </div>
 
-                  <div className="rounded-2xl border border-slate-800 bg-slate-900/45 p-4">
-                    <p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-500">
+                  <div className="rounded-2xl border border-slate-800 bg-slate-900/45 p-5 2xl:p-6">
+                    <p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-500 2xl:text-sm">
                       Solution
                     </p>
-                    <p className="mt-3 text-sm leading-7 text-slate-300 sm:text-base">
+
+                    <p className="mt-3 text-base leading-8 text-slate-300 2xl:text-lg 2xl:leading-9">
                       {product.solution}
                     </p>
                   </div>
@@ -56,40 +68,62 @@ export default function Products() {
               </div>
 
               <div>
-                <div className="rounded-3xl border border-slate-800 bg-black/20 p-5">
-                  <p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-500">
+                <div className="rounded-[2rem] border border-slate-800 bg-black/25 p-5 2xl:p-7">
+                  <p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-500 2xl:text-sm">
                     Workflow
                   </p>
 
-                  <div className="mt-5 grid gap-3 sm:grid-cols-5 sm:items-center">
+                  <div className="mt-6 grid gap-3 sm:grid-cols-5 sm:items-start 2xl:gap-4">
                     {product.workflow.map((step, index) => (
-                      <div key={step} className="flex items-center gap-3 sm:block">
-                        <div className="rounded-2xl border border-slate-800 bg-slate-950/80 p-4 text-center">
-                          <p className="text-[0.65rem] font-semibold text-orange-300">
+                      <div key={step} className="relative">
+                        <div className="rounded-2xl border border-slate-800 bg-slate-950/85 p-4 text-center transition group-hover:border-orange-500/25 2xl:p-5">
+                          <p className="text-[0.65rem] font-semibold text-orange-300 2xl:text-xs">
                             {String(index + 1).padStart(2, "0")}
                           </p>
-                          <p className="mt-1 text-xs font-medium text-slate-200">{step}</p>
+
+                          <p className="mt-2 text-xs font-semibold leading-5 text-slate-200 2xl:text-sm 2xl:leading-6">
+                            {step}
+                          </p>
                         </div>
+
                         {index < product.workflow.length - 1 && (
-                          <div className="h-px flex-1 bg-gradient-to-r from-orange-500/50 to-slate-800 sm:mt-3 sm:h-px sm:w-full" />
+                          <div className="hidden sm:block absolute left-[calc(100%+0.15rem)] top-1/2 h-px w-[calc(100%-0.3rem)] -translate-y-1/2 bg-gradient-to-r from-orange-500/45 to-slate-800" />
                         )}
                       </div>
                     ))}
                   </div>
                 </div>
 
-                <div className="mt-5 flex flex-wrap gap-2">
-                  {product.stack.map((tech) => (
-                    <span
-                      key={tech}
-                      className="rounded-full border border-slate-700 bg-slate-900/70 px-3 py-2 text-xs text-slate-300"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+                <div className="mt-6 rounded-[2rem] border border-slate-800 bg-slate-900/35 p-5 2xl:p-7">
+                  <p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-500 2xl:text-sm">
+                    Technical stack
+                  </p>
+
+                  <div className="mt-4 flex flex-wrap gap-2 2xl:gap-3">
+                    {product.stack.map((tech) => (
+                      <span
+                        key={tech}
+                        className="rounded-full border border-slate-700 bg-slate-900/70 px-3 py-2 text-xs text-slate-300 2xl:px-4 2xl:text-sm"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
 
-                <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                <div className="mt-6 rounded-[2rem] border border-orange-500/20 bg-orange-500/[0.07] p-5 2xl:p-7">
+                  <p className="text-xs font-semibold uppercase tracking-[0.24em] text-orange-300 2xl:text-sm">
+                    Why it matters
+                  </p>
+
+                  <p className="mt-3 text-sm leading-7 text-orange-100/85 2xl:text-base 2xl:leading-8">
+                    The product demonstrates the full chain: data ingestion,
+                    quality logic, API design, frontend UX, AI-assisted
+                    reporting and cloud deployment.
+                  </p>
+                </div>
+
+                <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap 2xl:mt-10">
                   {product.links.map((link) => (
                     <a
                       key={link.href}
@@ -98,8 +132,8 @@ export default function Products() {
                       rel="noreferrer"
                       className={
                         link.primary
-                          ? "inline-flex justify-center rounded-full bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-400"
-                          : "inline-flex justify-center rounded-full border border-slate-700 px-6 py-3 text-sm font-semibold text-slate-200 transition hover:border-orange-400 hover:text-orange-300"
+                          ? "inline-flex justify-center rounded-full bg-orange-500 px-7 py-3.5 text-sm font-semibold text-white shadow-[0_0_30px_rgba(249,115,22,0.25)] transition hover:bg-orange-400 hover:shadow-[0_0_42px_rgba(249,115,22,0.35)] 2xl:px-8 2xl:py-4 2xl:text-base"
+                          : "inline-flex justify-center rounded-full border border-slate-700 bg-slate-950/60 px-7 py-3.5 text-sm font-semibold text-slate-200 transition hover:border-orange-400 hover:text-orange-300 2xl:px-8 2xl:py-4 2xl:text-base"
                       }
                     >
                       {link.label}
