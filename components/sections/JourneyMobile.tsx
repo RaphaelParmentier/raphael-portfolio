@@ -19,7 +19,7 @@ export default function JourneyMobile() {
             key={step.id}
             className={`overflow-hidden rounded-[28px] border transition-all duration-500 ${
               isActive
-                ? "border-orange-500/30 bg-orange-500/[0.06]"
+                ? "border-orange-500/30 bg-orange-500/6"
                 : "border-white/10 bg-[#050816]"
             }`}
           >

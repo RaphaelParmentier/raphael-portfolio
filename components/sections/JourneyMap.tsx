@@ -3,7 +3,7 @@
 import JourneyMobile from "./JourneyMobile";
 
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useMemo } from "react";
 
 import { journeySteps } from "@/data/journey";
 
@@ -15,22 +15,17 @@ type JourneyMapProps = {
 };
 
 export default function JourneyMap({ activeJourneyId, onJourneyChange }: JourneyMapProps) {
-  const [activeStep, setActiveStep] = useState(
-    journeySteps.find((step) => step.id === activeJourneyId) ?? journeySteps[0]
+  const activeStep = useMemo(
+    () => journeySteps.find((step) => step.id === activeJourneyId) ?? journeySteps[0],
+    [activeJourneyId]
   );
-
-  useEffect(() => {
-    const nextStep = journeySteps.find((step) => step.id === activeJourneyId) ?? journeySteps[0];
-
-    setActiveStep(nextStep);
-  }, [activeJourneyId]);
 
   const activeIndex = journeySteps.findIndex((step) => step.id === activeStep.id);
 
   return (
     <section
       id="journey"
-      className="relative z-10 mx-auto max-w-[112rem] px-5 py-20 sm:px-6 lg:py-32 2xl:px-10 2xl:py-40"
+      className="relative z-10 mx-auto max-w-448 px-5 py-20 sm:px-6 lg:py-32 2xl:px-10 2xl:py-40"
     >
       <div className="max-w-6xl">
         <p className="text-xs font-semibold uppercase tracking-[0.28em] text-orange-400 sm:text-sm 2xl:text-base">
@@ -61,7 +56,7 @@ export default function JourneyMap({ activeJourneyId, onJourneyChange }: Journey
       <div className="mt-10 hidden gap-6 lg:grid xl:grid-cols-[0.9fr_1.1fr] xl:items-stretch 2xl:mt-16 2xl:gap-12">
         {/* LEFT PANEL */}
 
-        <div className="rounded-[2rem] border border-slate-800 bg-slate-950/70 p-5 shadow-2xl shadow-orange-500/5 backdrop-blur lg:rounded-[2.5rem] 2xl:p-7">
+        <div className="rounded-4xl border border-slate-800 bg-slate-950/70 p-5 shadow-2xl shadow-orange-500/5 backdrop-blur lg:rounded-[2.5rem] 2xl:p-7">
           <div className="grid gap-3 xl:gap-4">
             {journeySteps.map((step, index) => {
               const isActive = step.id === activeStep.id;
@@ -106,7 +101,7 @@ export default function JourneyMap({ activeJourneyId, onJourneyChange }: Journey
 
           {/* CURRENT THREAD */}
 
-          <div className="mt-6 rounded-[2rem] border border-orange-500/20 bg-orange-500/[0.07] p-5 2xl:mt-8 2xl:p-7">
+          <div className="mt-6 rounded-4xl border border-orange-500/20 bg-orange-500/[0.07] p-5 2xl:mt-8 2xl:p-7">
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-orange-300 2xl:text-sm">
               Current Thread
             </p>
@@ -150,7 +145,7 @@ export default function JourneyMap({ activeJourneyId, onJourneyChange }: Journey
                   {activeStep.eyebrow}
                 </p>
 
-                <h3 className="mt-4 text-6xl font-semibold leading-[0.92] tracking-[-0.05em] text-white">
+                <h3 className="mt-4 text-6xl font-semibold leading-[0.92] tracking-tighter text-white">
                   {activeStep.title}
                 </h3>
 

@@ -43,7 +43,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative z-10 mx-auto max-w-[112rem] px-5 py-24 sm:px-6 lg:py-32 2xl:px-10 2xl:py-40"
+      className="relative z-10 mx-auto max-w-448 px-5 py-24 sm:px-6 lg:py-32 2xl:px-10 2xl:py-40"
     >
       <div className="relative overflow-hidden rounded-[2.5rem] border border-orange-500/20 bg-gradient-to-br from-slate-950 via-slate-950 to-orange-950/20 p-6 shadow-2xl shadow-orange-500/10 sm:p-8 lg:p-12 2xl:p-16">
         <div className="absolute right-0 top-0 h-96 w-96 translate-x-1/3 -translate-y-1/3 rounded-full bg-orange-500/10 blur-3xl" />
@@ -88,7 +88,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="rounded-[2rem] border border-slate-800 bg-slate-950/75 p-5 shadow-2xl shadow-black/20 sm:p-7 lg:p-8 2xl:p-10">
+            <div className="rounded-4xl border border-slate-800 bg-slate-950/75 p-5 shadow-2xl shadow-black/20 sm:p-7 lg:p-8 2xl:p-10">
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-orange-300 2xl:text-sm">
               Get in touch
             </p>

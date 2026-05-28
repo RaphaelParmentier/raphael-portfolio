@@ -16,7 +16,7 @@ export default function Navbar() {
   return (
     <>
       <header className="fixed top-0 z-50 w-full border-b border-white/10 bg-[#08090B]/90 backdrop-blur-2xl">
-        <div className="mx-auto flex max-w-[112rem] items-center justify-between px-5 py-4 sm:px-6 sm:py-5 2xl:px-10">
+        <div className="mx-auto flex max-w-448 items-center justify-between px-5 py-4 sm:px-6 sm:py-5 2xl:px-10">
           <a
             href="#top"
             className="group flex shrink-0 items-center gap-3 whitespace-nowrap rounded-full border border-transparent pr-3 text-xs font-semibold tracking-[0.28em] text-[#F3F1EA] transition sm:text-sm 2xl:text-base"

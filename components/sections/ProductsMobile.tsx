@@ -3,7 +3,7 @@
 export default function ProductsMobile() {
   return (
     <div className="lg:hidden">
-      <div className="rounded-[32px] border border-white/10 bg-[#050816] p-8">
+      <div className="rounded-4xl border border-white/10 bg-[#050816] p-8">
         <div className="mb-4 inline-flex rounded-full border border-emerald-500/20 bg-emerald-500/10 px-4 py-2 text-xs text-emerald-300">
           Live platform
         </div>

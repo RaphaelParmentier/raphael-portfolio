@@ -29,7 +29,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
   };
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/75 px-5 backdrop-blur-md">
+    <div className="fixed inset-0 z-100 flex items-center justify-center bg-black/75 px-5 backdrop-blur-md">
       <div className="relative w-full max-w-4xl overflow-hidden rounded-[2.5rem] border border-slate-800 bg-slate-950 p-6 shadow-2xl shadow-orange-500/20 sm:p-8 lg:p-10">
         <div className="absolute right-0 top-0 h-72 w-72 translate-x-1/3 -translate-y-1/3 rounded-full bg-orange-500/10 blur-3xl" />
 
@@ -60,7 +60,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
           </div>
 
           <div className="mt-8 grid gap-6 lg:grid-cols-[1fr_0.9fr]">
-            <div className="rounded-[2rem] border border-slate-800 bg-slate-900/45 p-5 sm:p-6">
+            <div className="rounded-4xl border border-slate-800 bg-slate-900/45 p-5 sm:p-6">
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-orange-300">
                 Direct email
               </p>
@@ -89,7 +89,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
               </div>
             </div>
 
-            <div className="rounded-[2rem] border border-slate-800 bg-slate-900/35 p-5 sm:p-6">
+            <div className="rounded-4xl border border-slate-800 bg-slate-900/35 p-5 sm:p-6">
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-orange-300">
                 Good fit
               </p>

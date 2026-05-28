@@ -20,8 +20,8 @@ export default function Hero({ onJourneySelect }: HeroProps) {
   };
 
   return (
-    <section className="relative z-10 flex min-h-[92svh] items-center overflow-hidden px-5 py-28 sm:px-6 lg:min-h-[100svh] lg:py-32 2xl:py-40">
-      <div className="mx-auto grid w-full max-w-[112rem] gap-14 lg:grid-cols-[1.12fr_0.88fr] lg:items-center 2xl:gap-24">
+    <section className="relative z-10 flex min-h-[92svh] items-center overflow-hidden px-5 py-28 sm:px-6 lg:min-h-svh lg:py-32 2xl:py-40">
+      <div className="mx-auto grid w-full max-w-448 gap-14 lg:grid-cols-[1.12fr_0.88fr] lg:items-center 2xl:gap-24">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -75,9 +75,9 @@ export default function Hero({ onJourneySelect }: HeroProps) {
           transition={{ duration: 0.75, delay: 0.12, ease: "easeOut" }}
           className="relative hidden lg:block"
         >
-          <div className="absolute -inset-4 rounded-[2rem] bg-orange-500/10 blur-3xl" />
+          <div className="absolute -inset-4 rounded-4xl bg-orange-500/10 blur-3xl" />
 
-          <div className="relative overflow-hidden rounded-[2rem] border border-slate-800 bg-slate-950/80 p-5 shadow-2xl shadow-orange-500/10 backdrop-blur sm:p-7 xl:p-8 2xl:p-10">
+          <div className="relative overflow-hidden rounded-4xl border border-slate-800 bg-slate-950/80 p-5 shadow-2xl shadow-orange-500/10 backdrop-blur sm:p-7 xl:p-8 2xl:p-10">
             <div className="mb-6 flex flex-col gap-3 border-b border-slate-800 pb-5 sm:flex-row sm:items-center sm:justify-between">
               <div>
                 <p className="text-xs uppercase tracking-[0.28em] text-orange-300 2xl:text-sm">
@@ -106,7 +106,7 @@ export default function Hero({ onJourneySelect }: HeroProps) {
                       {String(index + 1).padStart(2, "0")}
                     </div>
                     {index < journeyPreview.length - 1 && (
-                      <div className="mt-2 h-8 w-px bg-gradient-to-b from-orange-500/50 to-slate-800 2xl:h-10" />
+                      <div className="mt-2 h-8 w-px bg-linear-to-b from-orange-500/50 to-slate-800 2xl:h-10" />
                     )}
                   </div>
 

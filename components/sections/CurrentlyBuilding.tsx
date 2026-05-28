@@ -29,7 +29,7 @@ export default function CurrentlyBuilding() {
   return (
     <section
       id="building"
-      className="relative z-10 mx-auto max-w-[112rem] px-5 py-24 sm:px-6 lg:py-32 2xl:px-10 2xl:py-40"
+      className="relative z-10 mx-auto max-w-448 px-5 py-24 sm:px-6 lg:py-32 2xl:px-10 2xl:py-40"
     >
       <div className="grid gap-10 xl:grid-cols-[0.85fr_1.15fr] xl:items-center 2xl:gap-16">
         <div>
@@ -58,7 +58,7 @@ export default function CurrentlyBuilding() {
           </div>
         </div>
 
-        <div className="relative overflow-hidden rounded-[2.5rem] border border-slate-800 bg-slate-950/75 p-5 shadow-2xl shadow-orange-500/10 sm:p-7 lg:p-10 2xl:p-12">
+          <div className="relative overflow-hidden rounded-[2.5rem] border border-slate-800 bg-slate-950/75 p-5 shadow-2xl shadow-orange-500/10 sm:p-7 lg:p-10 2xl:p-12">
           <div className="absolute right-0 top-0 h-80 w-80 translate-x-1/3 -translate-y-1/3 rounded-full bg-orange-500/10 blur-3xl" />
 
           <div className="relative z-10">
@@ -84,7 +84,7 @@ export default function CurrentlyBuilding() {
               search decisions.
             </p>
 
-            <div className="mt-8 rounded-[2rem] border border-slate-800 bg-black/25 p-5 2xl:p-7">
+            <div className="mt-8 rounded-4xl border border-slate-800 bg-black/25 p-5 2xl:p-7">
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-500 2xl:text-sm">
                 Pipeline
               </p>
@@ -103,7 +103,7 @@ export default function CurrentlyBuilding() {
                     </div>
 
                     {index < pipeline.length - 1 && (
-                      <div className="hidden sm:block absolute left-[calc(100%+0.15rem)] top-1/2 h-px w-[calc(100%-0.3rem)] -translate-y-1/2 bg-gradient-to-r from-orange-500/45 to-slate-800" />
+                      <div className="hidden sm:block absolute left-[calc(100%+0.15rem)] top-1/2 h-px w-[calc(100%-0.3rem)] -translate-y-1/2 bg-linear-to-r from-orange-500/45 to-slate-800" />
                     )}
                   </div>
                 ))}
@@ -128,7 +128,7 @@ export default function CurrentlyBuilding() {
             </div>
 
             <div className="mt-7 grid gap-5 xl:grid-cols-2 2xl:mt-9">
-              <div className="rounded-[2rem] border border-slate-800 bg-slate-900/35 p-5 2xl:p-7">
+              <div className="rounded-4xl border border-slate-800 bg-slate-900/35 p-5 2xl:p-7">
                 <p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-500 2xl:text-sm">
                   Sources
                 </p>
@@ -145,7 +145,7 @@ export default function CurrentlyBuilding() {
                 </div>
               </div>
 
-              <div className="rounded-[2rem] border border-slate-800 bg-slate-900/35 p-5 2xl:p-7">
+              <div className="rounded-4xl border border-slate-800 bg-slate-900/35 p-5 2xl:p-7">
                 <p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-500 2xl:text-sm">
                   Planned stack
                 </p>

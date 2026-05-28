@@ -1,13 +1,17 @@
 // components/sections/TeachingMobile.tsx
 
+import Image from "next/image";
+
 export default function TeachingMobile() {
   return (
     <div className="lg:hidden">
-      <div className="overflow-hidden rounded-[32px] border border-white/10 bg-[#050816]">
-        <img
-          src="/screenshots/brainlab.jpg"
+      <div className="overflow-hidden rounded-4xl border border-white/10 bg-[#050816]">
+        <Image
+          src="/images/teaching-brain-lab-current.jpg"
           alt="Teaching Brain Lab"
-          className="h-[220px] w-full object-cover object-top"
+          className="h-55 w-full object-cover object-top"
+          width={800}
+          height={220}
         />
 
         <div className="p-7">
@@ -29,7 +33,7 @@ export default function TeachingMobile() {
               (item) => (
                 <div
                   key={item}
-                  className="rounded-2xl border border-white/10 bg-white/[0.02] px-5 py-4 text-sm text-slate-300"
+                  className="rounded-2xl border border-white/10 bg-white/2 px-5 py-4 text-sm text-slate-300"
                 >
                   {item}
                 </div>

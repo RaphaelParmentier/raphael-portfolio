@@ -5,7 +5,7 @@ export default function Products() {
   return (
     <section
       id="work"
-      className="relative z-10 mx-auto max-w-[112rem] px-5 py-24 sm:px-6 lg:py-32 2xl:px-10 2xl:py-40"
+      className="relative z-10 mx-auto max-w-448 px-5 py-24 sm:px-6 lg:py-32 2xl:px-10 2xl:py-40"
     >
       <SectionHeader
         eyebrow="What I Build"
@@ -20,7 +20,7 @@ export default function Products() {
             className="group relative overflow-hidden rounded-[2.5rem] border border-slate-800 bg-slate-950/75 p-5 shadow-2xl shadow-orange-500/5 transition duration-300 hover:border-orange-500/35 hover:bg-slate-900/80 sm:p-7 lg:p-10 2xl:p-12"
           >
             <div className="absolute -right-24 top-0 h-80 w-80 rounded-full bg-orange-500/10 blur-3xl transition duration-500 group-hover:bg-orange-500/15" />
-            <div className="absolute bottom-[-10rem] left-1/3 h-72 w-72 rounded-full bg-sky-500/5 blur-3xl" />
+            <div className="absolute -bottom-40 left-1/3 h-72 w-72 rounded-full bg-sky-500/5 blur-3xl" />
 
             <div className="relative z-10 grid gap-10 xl:grid-cols-[0.9fr_1.1fr] xl:items-start 2xl:gap-14">
               <div>
@@ -68,7 +68,7 @@ export default function Products() {
               </div>
 
               <div>
-                <div className="rounded-[2rem] border border-slate-800 bg-black/25 p-5 2xl:p-7">
+                <div className="rounded-4xl border border-slate-800 bg-black/25 p-5 2xl:p-7">
                   <p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-500 2xl:text-sm">
                     Workflow
                   </p>
@@ -87,14 +87,14 @@ export default function Products() {
                         </div>
 
                         {index < product.workflow.length - 1 && (
-                          <div className="hidden sm:block absolute left-[calc(100%+0.15rem)] top-1/2 h-px w-[calc(100%-0.3rem)] -translate-y-1/2 bg-gradient-to-r from-orange-500/45 to-slate-800" />
+                          <div className="hidden sm:block absolute left-[calc(100%+0.15rem)] top-1/2 h-px w-[calc(100%-0.3rem)] -translate-y-1/2 bg-linear-to-r from-orange-500/45 to-slate-800" />
                         )}
                       </div>
                     ))}
                   </div>
                 </div>
 
-                <div className="mt-6 rounded-[2rem] border border-slate-800 bg-slate-900/35 p-5 2xl:p-7">
+                <div className="mt-6 rounded-4xl border border-slate-800 bg-slate-900/35 p-5 2xl:p-7">
                   <p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-500 2xl:text-sm">
                     Technical stack
                   </p>
@@ -111,7 +111,7 @@ export default function Products() {
                   </div>
                 </div>
 
-                <div className="mt-6 rounded-[2rem] border border-orange-500/20 bg-orange-500/[0.07] p-5 2xl:p-7">
+                <div className="mt-6 rounded-4xl border border-orange-500/20 bg-orange-500/[0.07] p-5 2xl:p-7">
                   <p className="text-xs font-semibold uppercase tracking-[0.24em] text-orange-300 2xl:text-sm">
                     Why it matters
                   </p>
