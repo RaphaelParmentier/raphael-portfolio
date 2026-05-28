@@ -1,36 +1,334 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Raphael Parmentier — AI Systems Portfolio
 
-## Getting Started
+Production-oriented portfolio focused on AI engineering, data systems, automation workflows and applied teaching.
 
-First, run the development server:
+Built with a strong emphasis on:
+
+- decision-support systems,
+- analytical reasoning,
+- operational AI,
+- interactive learning experiences,
+- premium UI/UX engineering.
+
+---
+
+# Live Website
+
+🌐 https://raphaelparmentier.dev
+
+---
+
+# Portfolio Positioning
+
+This portfolio is designed as a system, not a static CV.
+
+It presents:
+
+- AI-powered products,
+- production-ready workflows,
+- educational systems,
+- applied analytical thinking,
+- and operational engineering logic.
+
+The entire experience follows a single philosophy:
+
+> Turning complex information into actionable decisions.
+
+---
+
+# Core Sections
+
+## Hero Section
+
+High-impact landing section presenting:
+
+- AI engineering identity,
+- operational positioning,
+- decision-oriented mindset,
+- interactive career navigation.
+
+Features:
+
+- animated journey system,
+- recruiter-oriented storytelling,
+- responsive premium layout,
+- mobile-first adaptations.
+
+---
+
+## Journey Map
+
+Interactive career progression system.
+
+Tracks the evolution from:
+
+- Scientist
+- Statistician
+- Builder
+- AI Engineer
+- Teacher
+
+Each step includes:
+
+- operational context,
+- evidence blocks,
+- capabilities,
+- system-thinking progression.
+
+Desktop:
+
+- animated progression thread,
+- premium card transitions,
+- contextual side panels.
+
+Mobile:
+
+- stacked storytelling layout,
+- simplified interaction flow,
+- optimized reading rhythm.
+
+---
+
+## Teaching Brain Lab
+
+Interactive educational showcase.
+
+A production-grade teaching system designed around:
+
+- learning by doing,
+- analytical workflows,
+- AI systems,
+- real deliverables,
+- mission-based progression.
+
+Features:
+
+- responsive premium UI,
+- interactive architecture,
+- educational product positioning,
+- recruiter-friendly presentation.
+
+---
+
+## AI Data Quality Auditor
+
+Full-stack AI-assisted analytical platform.
+
+Transforms raw CSV / Excel files into:
+
+- diagnostics,
+- scoring systems,
+- AI-generated reports,
+- decision-support outputs.
+
+Tech stack:
+
+- Next.js
+- FastAPI
+- Python
+- Pandas
+- Gemini
+- Vercel
+- Render
+
+Positioning:
+
+- production system,
+- not a demo project.
+
+---
+
+## Currently Building
+
+Career Intelligence Assistant.
+
+An AI-powered opportunity intelligence workflow focused on:
+
+- opportunity aggregation,
+- relevance scoring,
+- AI-assisted summarization,
+- decision support.
+
+The mobile experience intentionally simplifies this section to preserve UX quality and cognitive flow.
+
+---
+
+## Contact System
+
+Responsive recruiter-oriented contact experience.
+
+Desktop:
+
+- premium modal interaction,
+- direct navigation,
+- structured collaboration positioning.
+
+Mobile:
+
+- simplified conversion-oriented contact flow,
+- faster access to email / LinkedIn / GitHub.
+
+---
+
+# Technical Stack
+
+## Frontend
+
+- Next.js 16
+- React
+- TypeScript
+- TailwindCSS
+- Framer Motion
+
+## Backend / AI
+
+- Python
+- FastAPI
+- Pandas
+- Gemini API
+
+## Deployment
+
+- Vercel
+- Render
+
+---
+
+# Design Philosophy
+
+The portfolio intentionally avoids:
+
+- generic SaaS templates,
+- static resume layouts,
+- portfolio card spam,
+- overuse of buzzwords.
+
+Instead, the focus is on:
+
+- system coherence,
+- operational credibility,
+- recruiter engagement,
+- premium interaction design,
+- clear narrative progression.
+
+---
+
+# Responsive Strategy
+
+The project contains dedicated mobile adaptations.
+
+Mobile UX is not a compressed desktop version.
+
+Specific mobile optimizations include:
+
+- simplified workflows,
+- reduced cognitive load,
+- stacked layouts,
+- adaptive content density,
+- mobile-specific section variants.
+
+Examples:
+
+- simplified project workflows,
+- condensed footer,
+- dedicated mobile contact flow,
+- streamlined teaching presentation.
+
+---
+
+# Current Focus
+
+Ongoing improvements:
+
+- mobile UX refinement,
+- interaction polish,
+- performance optimization,
+- recruiter conversion flow,
+- AI workflow integrations,
+- educational system expansion.
+
+---
+
+# Local Development
+
+Clone repository:
+
+```bash
+git clone https://github.com/RaphaelParmentier/raphael-portfolio.git
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```txt
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+# Build Production
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Performance Goals
 
-## Deploy on Vercel
+Focus areas:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- premium perceived quality,
+- responsive smoothness,
+- clean visual hierarchy,
+- low cognitive friction,
+- fast navigation,
+- recruiter retention.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+# Why This Portfolio Matters
+
+This portfolio is intentionally designed to demonstrate:
+
+- technical execution,
+- systems thinking,
+- analytical rigor,
+- AI engineering capability,
+- product-oriented reasoning,
+- teaching and communication ability.
+
+The objective is not simply to display projects.
+
+The objective is to demonstrate how complex systems are designed, structured and communicated.
+
+---
+
+# Author
+
+Raphaël Parmentier
+
+AI Engineer • Data Scientist • Automation Builder • University Lecturer
+
+LinkedIn:
+https://www.linkedin.com/in/raphaelparmentier/
+
+GitHub:
+https://github.com/RaphaelParmentier
+
+---
+
+# License
+
+MIT License
