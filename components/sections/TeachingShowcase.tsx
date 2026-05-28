@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
-import { motion } from "framer-motion";
 import SectionHeader from "@/components/ui/SectionHeader";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 const teachingMilestones = [
   {
@@ -42,7 +42,7 @@ const teachingPillars = [
   },
   {
     title: "Professional deliverables",
-    text: "Outputs are designed to look like work students could reuse.",
+    text: "Students build systems, reports and analytical workflows inspired by real operational contexts.",
   },
 ];
 
@@ -80,9 +80,8 @@ export default function TeachingShowcase() {
             </div>
 
             <p className="mt-6 max-w-5xl text-lg leading-9 text-slate-400 xl:text-xl xl:leading-10 2xl:text-2xl 2xl:leading-[1.6]">
-              An interactive learning interface built to show how concepts
-              connect: data strategy, statistical reasoning, machine learning,
-              AI workflows and professional communication.
+              An interactive learning interface built to show how concepts connect: data strategy,
+              statistical reasoning, machine learning, AI workflows and professional communication.
             </p>
 
             <div className="mt-8 overflow-hidden rounded-[2rem] border border-slate-800 bg-black/40 shadow-2xl shadow-black/40 2xl:mt-10">
@@ -122,9 +121,7 @@ export default function TeachingShowcase() {
                     {String(index + 1).padStart(2, "0")}
                   </span>
 
-                  <h4 className="text-base font-semibold text-white 2xl:text-xl">
-                    {pillar.title}
-                  </h4>
+                  <h4 className="text-base font-semibold text-white 2xl:text-xl">{pillar.title}</h4>
 
                   <p className="mt-2 text-sm leading-6 text-slate-400 2xl:text-base 2xl:leading-7">
                     {pillar.text}
@@ -199,9 +196,8 @@ export default function TeachingShowcase() {
 
           <div className="mt-6 rounded-3xl border border-orange-500/20 bg-orange-500/10 p-5 2xl:p-7">
             <p className="text-sm leading-7 text-orange-100 2xl:text-base 2xl:leading-8">
-              Teaching Brain Lab represents the evolution of my teaching
-              approach: connecting statistics, machine learning and AI workflows
-              into an interactive learning system.
+              Teaching Brain Lab represents the evolution of my teaching approach: connecting
+              statistics, machine learning and AI workflows into an interactive learning system.
             </p>
           </div>
         </div>

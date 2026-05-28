@@ -37,16 +37,16 @@ export const journeySteps: JourneyStep[] = [
     id: "statistician",
     title: "Statistician",
     shortTitle: "Statistics",
-    subtitle: "Turning uncertainty into evidence",
+    subtitle: "Evidence, modeling and biological data",
     period: "Bioinformatics, Biostatistics & Pharma R&D",
     badge: "2019 — 2024",
     eyebrow: "From observation to inference",
     narrative:
-      "From CRISPR prediction research to sperm whale behavioural analysis and pharmaceutical R&D at GSK and Sanofi, I learned how difficult it is to extract reliable conclusions from noisy biological data.",
+      "From CRISPR prediction research to sperm whale behavioural analysis and pharmaceutical R&D at GSK and Sanofi, I learned how difficult it is to extract reliable conclusions from noisy biological data. These experiences introduced statistical modelling, uncertainty management and early machine learning workflows applied to experimental biological data.",
     realization:
-      "Statistics became the bridge between experimental complexity and actionable evidence.",
+      "Statistics and machine learning became the bridge between experimental complexity and actionable evidence.",
     proof: [
-      "CRISPRdb statistical validation",
+      "CRISPRdb statistical validation and supervised learning exposure",
       "Unsupervised learning on sperm whale sonar exposure",
       "Biostatistics in regulated pharmaceutical R&D environments",
       "Experimental uncertainty and scientific decision support",
@@ -54,8 +54,8 @@ export const journeySteps: JourneyStep[] = [
     tools: [
       "Statistics",
       "Bioinformatics",
-      "Experimental design",
       "Machine learning",
+      "Biological modelling",
       "R&D workflows",
     ],
   },
@@ -120,9 +120,29 @@ export const journeySteps: JourneyStep[] = [
 ];
 
 export const journeyPreview = [
-  "Scientific Foundations",
-  "Statistical Reasoning",
-  "Operational Automation",
-  "AI Engineering",
-  "Knowledge Transfer",
+  {
+    id: "scientist",
+    label: "Scientific Foundations",
+    description: "Biology, observation and experimental data",
+  },
+  {
+    id: "statistician",
+    label: "Statistical Reasoning",
+    description: "Evidence, modeling and biological data",
+  },
+  {
+    id: "builder",
+    label: "Operational Automation",
+    description: "Serebis, processes and business workflows",
+  },
+  {
+    id: "engineer",
+    label: "AI Engineering",
+    description: "AI products, automation and deployment",
+  },
+  {
+    id: "teacher",
+    label: "Knowledge Transfer",
+    description: "Teaching, clarity and learning systems",
+  },
 ];

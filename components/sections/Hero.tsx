@@ -3,15 +3,22 @@
 import { journeyPreview } from "@/data/journey";
 import { motion } from "framer-motion";
 
-const journeyDescriptions = [
-  "Biology, observation and experimental data",
-  "Statistics, bioinformatics and uncertainty",
-  "Serebis, processes and business workflows",
-  "AI products, automation and deployment",
-  "Teaching, clarity and learning systems",
-];
+type HeroProps = {
+  onJourneySelect: (id: string) => void;
+};
 
-export default function Hero() {
+export default function Hero({ onJourneySelect }: HeroProps) {
+  const handleJourneyClick = (id: string) => {
+    onJourneySelect(id);
+
+    window.requestAnimationFrame(() => {
+      document.getElementById("journey")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  };
+
   return (
     <section className="relative z-10 flex min-h-[100svh] items-center overflow-hidden px-5 py-28 sm:px-6 lg:py-32 2xl:py-40">
       <div className="mx-auto grid w-full max-w-[112rem] gap-14 lg:grid-cols-[1.12fr_0.88fr] lg:items-center 2xl:gap-24">
@@ -88,10 +95,11 @@ export default function Hero() {
 
             <div className="space-y-3">
               {journeyPreview.map((item, index) => (
-                <a
-                  key={item}
-                  href="#journey"
-                  className="group grid grid-cols-[auto_1fr] gap-4 rounded-2xl border border-slate-800 bg-slate-900/45 p-4 transition hover:border-orange-500/40 hover:bg-slate-900/80 xl:p-5 2xl:p-6"
+                <button
+                  key={item.id}
+                  type="button"
+                  onClick={() => handleJourneyClick(item.id)}
+                  className="group grid w-full grid-cols-[auto_1fr] gap-4 rounded-2xl border border-slate-800 bg-slate-900/45 p-4 text-left transition hover:border-orange-500/40 hover:bg-slate-900/80 xl:p-5 2xl:p-6"
                 >
                   <div className="flex flex-col items-center">
                     <div className="flex h-9 w-9 items-center justify-center rounded-full border border-orange-500/30 bg-orange-500/10 text-xs font-semibold text-orange-200 shadow-[0_0_24px_rgba(233,121,45,0.18)] 2xl:h-11 2xl:w-11 2xl:text-sm">
@@ -104,13 +112,13 @@ export default function Hero() {
 
                   <div className="pt-1">
                     <p className="text-sm font-semibold text-slate-100 transition group-hover:text-orange-100 2xl:text-lg">
-                      {item}
+                      {item.label}
                     </p>
                     <p className="mt-1 text-xs leading-5 text-slate-500 2xl:text-base 2xl:leading-7">
-                      {journeyDescriptions[index]}
+                      {item.description}
                     </p>
                   </div>
-                </a>
+                </button>
               ))}
             </div>
           </div>

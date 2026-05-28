@@ -2,14 +2,31 @@
 
 import { journeySteps } from "@/data/journey";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const principles = ["Scientist", "Statistician", "Builder", "AI Engineer", "Teacher"];
 
-export default function JourneyMap() {
-  const [activeStep, setActiveStep] = useState(journeySteps[0]);
+type JourneyMapProps = {
+  activeJourneyId: string;
+  onJourneyChange: (id: string) => void;
+};
+
+export default function JourneyMap({ activeJourneyId, onJourneyChange }: JourneyMapProps) {
+  const [activeStep, setActiveStep] = useState(
+    journeySteps.find((step) => step.id === activeJourneyId) ?? journeySteps[0]
+  );
+
+  useEffect(() => {
+    const nextStep = journeySteps.find((step) => step.id === activeJourneyId) ?? journeySteps[0];
+
+    setActiveStep(nextStep);
+  }, [activeJourneyId]);
 
   const activeIndex = journeySteps.findIndex((step) => step.id === activeStep.id);
+
+  const handleStepChange = (id: string) => {
+    onJourneyChange(id);
+  };
 
   return (
     <section
@@ -43,7 +60,7 @@ export default function JourneyMap() {
                   key={step.id}
                   type="button"
                   whileHover={{ scale: 1.01 }}
-                  onClick={() => setActiveStep(step)}
+                  onClick={() => handleStepChange(step.id)}
                   className={`group min-w-[250px] rounded-2xl border p-4 text-left transition xl:min-w-0 xl:p-5 2xl:p-6 ${
                     isActive
                       ? "border-orange-500/50 bg-orange-500/10 shadow-[0_0_34px_rgba(233,121,45,0.16)]"
