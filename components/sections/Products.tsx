@@ -1,11 +1,13 @@
-import { productSystems } from "@/data/products";
+// components/sections/Products.tsx
+
 import SectionHeader from "@/components/ui/SectionHeader";
+import { productSystems } from "@/data/products";
 
 export default function Products() {
   return (
     <section
       id="work"
-      className="relative z-10 mx-auto max-w-448 px-5 py-24 sm:px-6 lg:py-32 2xl:px-10 2xl:py-40"
+      className="relative z-10 mx-auto max-w-448 px-5 py-20 sm:px-6 lg:py-32 2xl:px-10 2xl:py-40"
     >
       <SectionHeader
         eyebrow="What I Build"
@@ -13,7 +15,70 @@ export default function Products() {
         description="This section focuses on deployed technical products: AI-powered workflows, analytical applications and decision-support systems built to solve concrete problems."
       />
 
-      <div className="mt-12 grid gap-8 2xl:mt-16">
+      {/* MOBILE VERSION — no workflow, no technical stack */}
+      <div className="mt-10 grid gap-6 lg:hidden">
+        {productSystems.map((product) => (
+          <article
+            key={product.title}
+            className="relative overflow-hidden rounded-4xl border border-slate-800 bg-slate-950/75 p-7 shadow-2xl shadow-orange-500/5"
+          >
+            <div className="absolute -right-24 top-0 h-72 w-72 rounded-full bg-orange-500/10 blur-3xl" />
+
+            <div className="relative z-10">
+              <div className="flex flex-wrap gap-3">
+                <span className="w-fit rounded-full border border-orange-500/25 bg-orange-500/10 px-3 py-1 text-xs font-medium text-orange-300">
+                  {product.category}
+                </span>
+
+                <span className="w-fit rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 text-xs text-emerald-300">
+                  {product.status}
+                </span>
+              </div>
+
+              <h3 className="mt-6 text-4xl font-semibold leading-tight tracking-[-0.04em] text-white">
+                {product.title}
+              </h3>
+
+              <p className="mt-5 text-lg leading-9 text-slate-400">
+                A deployed AI-assisted platform that turns raw datasets into quality diagnostics,
+                structured checks and analytical reports.
+              </p>
+
+              <div className="mt-7 rounded-3xl border border-orange-500/20 bg-orange-500/5 p-6">
+                <p className="text-sm font-semibold uppercase tracking-[0.28em] text-orange-300">
+                  Why it matters
+                </p>
+
+                <p className="mt-4 text-base leading-8 text-orange-100/85">
+                  It demonstrates the full product chain: data ingestion, quality logic, API design,
+                  frontend UX, AI-assisted reporting and deployment.
+                </p>
+              </div>
+
+              <div className="mt-8 flex flex-col gap-4">
+                {product.links.map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={
+                      link.primary
+                        ? "rounded-full bg-orange-500 px-6 py-4 text-center font-semibold text-white shadow-[0_0_30px_rgba(249,115,22,0.25)]"
+                        : "rounded-full border border-slate-700 bg-slate-950/60 px-6 py-4 text-center font-semibold text-slate-200"
+                    }
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      {/* DESKTOP VERSION */}
+      <div className="mt-12 hidden gap-8 lg:grid 2xl:mt-16">
         {productSystems.map((product) => (
           <article
             key={product.title}
@@ -39,9 +104,8 @@ export default function Products() {
                 </h3>
 
                 <p className="mt-6 max-w-4xl text-lg leading-9 text-slate-400 xl:text-xl xl:leading-10 2xl:text-2xl 2xl:leading-[1.6]">
-                  A deployed full-stack system designed to turn raw files into
-                  structured diagnostics, quality scores and AI-assisted
-                  analytical reports.
+                  A deployed full-stack system designed to turn raw files into structured
+                  diagnostics, quality scores and AI-assisted analytical reports.
                 </p>
 
                 <div className="mt-8 grid gap-4 2xl:mt-10 2xl:gap-5">
@@ -87,7 +151,7 @@ export default function Products() {
                         </div>
 
                         {index < product.workflow.length - 1 && (
-                          <div className="hidden sm:block absolute left-[calc(100%+0.15rem)] top-1/2 h-px w-[calc(100%-0.3rem)] -translate-y-1/2 bg-linear-to-r from-orange-500/45 to-slate-800" />
+                          <div className="absolute left-[calc(100%+0.15rem)] top-1/2 hidden h-px w-[calc(100%-0.3rem)] -translate-y-1/2 bg-linear-to-r from-orange-500/45 to-slate-800 sm:block" />
                         )}
                       </div>
                     ))}
@@ -117,9 +181,8 @@ export default function Products() {
                   </p>
 
                   <p className="mt-3 text-sm leading-7 text-orange-100/85 2xl:text-base 2xl:leading-8">
-                    The product demonstrates the full chain: data ingestion,
-                    quality logic, API design, frontend UX, AI-assisted
-                    reporting and cloud deployment.
+                    The product demonstrates the full chain: data ingestion, quality logic, API
+                    design, frontend UX, AI-assisted reporting and cloud deployment.
                   </p>
                 </div>
 

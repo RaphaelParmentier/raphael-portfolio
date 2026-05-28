@@ -1,10 +1,6 @@
-const pipeline = [
-  "Sources",
-  "Collection",
-  "Scoring",
-  "LLM Analysis",
-  "Email Reports",
-];
+// components/sections/CurrentlyBuilding.tsx
+
+const pipeline = ["Sources", "Collection", "Scoring", "LLM Analysis", "Email Reports"];
 
 const sources = ["LinkedIn", "APEC", "France Travail", "Welcome To The Jungle"];
 
@@ -29,9 +25,46 @@ export default function CurrentlyBuilding() {
   return (
     <section
       id="building"
-      className="relative z-10 mx-auto max-w-448 px-5 py-24 sm:px-6 lg:py-32 2xl:px-10 2xl:py-40"
+      className="relative z-10 mx-auto max-w-448 px-5 py-20 sm:px-6 lg:py-32 2xl:px-10 2xl:py-40"
     >
-      <div className="grid gap-10 xl:grid-cols-[0.85fr_1.15fr] xl:items-center 2xl:gap-16">
+      {/* MOBILE VERSION — no pipeline */}
+      <div className="lg:hidden">
+        <div className="rounded-4xl border border-slate-800 bg-slate-950/75 p-7 shadow-2xl shadow-orange-500/5">
+          <div className="inline-flex rounded-full border border-orange-500/25 bg-orange-500/10 px-3 py-1 text-xs font-medium text-orange-300">
+            Currently building
+          </div>
+
+          <h2 className="mt-6 text-4xl font-semibold leading-tight tracking-[-0.04em] text-white">
+            Career Intelligence Assistant
+          </h2>
+
+          <p className="mt-5 text-lg leading-9 text-slate-400">
+            An AI-assisted decision system designed to analyse opportunities, structure fragmented
+            information and support strategic career choices.
+          </p>
+
+          <div className="mt-7 rounded-3xl border border-orange-500/20 bg-orange-500/5 p-6">
+            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-orange-300">
+              Product positioning
+            </p>
+
+            <p className="mt-4 text-base leading-8 text-orange-100/85">
+              Not a chatbot: an operational workflow for opportunity analysis and career decision
+              support.
+            </p>
+          </div>
+
+          <a
+            href="#contact"
+            className="mt-8 block rounded-full bg-orange-500 px-6 py-4 text-center font-semibold text-white shadow-[0_0_30px_rgba(249,115,22,0.25)]"
+          >
+            Discuss this project
+          </a>
+        </div>
+      </div>
+
+      {/* DESKTOP VERSION */}
+      <div className="hidden gap-10 lg:grid xl:grid-cols-[0.85fr_1.15fr] xl:items-center 2xl:gap-16">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-orange-400 sm:text-sm 2xl:text-base">
             Currently Building
@@ -42,9 +75,8 @@ export default function CurrentlyBuilding() {
           </h2>
 
           <p className="mt-7 max-w-4xl text-lg leading-9 text-slate-400 xl:text-xl xl:leading-10 2xl:text-[1.35rem] 2xl:leading-10">
-            A future project designed around the same principle as this
-            portfolio: collect fragmented information, structure it, score it
-            and turn it into decisions.
+            A future project designed around the same principle as this portfolio: collect
+            fragmented information, structure it, score it and turn it into decisions.
           </p>
 
           <div className="mt-8 rounded-2xl border border-orange-500/20 bg-orange-500/[0.07] p-5 text-orange-100 shadow-[0_0_34px_rgba(249,115,22,0.08)] 2xl:p-7">
@@ -52,13 +84,13 @@ export default function CurrentlyBuilding() {
               Product positioning
             </p>
             <p className="mt-3 text-base leading-8 2xl:text-lg 2xl:leading-9">
-              Not a chatbot: a decision-support workflow for career search,
-              prioritization and follow-up.
+              Not a chatbot: a decision-support workflow for career search, prioritization and
+              follow-up.
             </p>
           </div>
         </div>
 
-          <div className="relative overflow-hidden rounded-[2.5rem] border border-slate-800 bg-slate-950/75 p-5 shadow-2xl shadow-orange-500/10 sm:p-7 lg:p-10 2xl:p-12">
+        <div className="relative overflow-hidden rounded-[2.5rem] border border-slate-800 bg-slate-950/75 p-5 shadow-2xl shadow-orange-500/10 sm:p-7 lg:p-10 2xl:p-12">
           <div className="absolute right-0 top-0 h-80 w-80 translate-x-1/3 -translate-y-1/3 rounded-full bg-orange-500/10 blur-3xl" />
 
           <div className="relative z-10">
@@ -79,9 +111,8 @@ export default function CurrentlyBuilding() {
             </div>
 
             <p className="mt-7 max-w-5xl text-lg leading-9 text-slate-400 xl:text-xl xl:leading-10 2xl:text-2xl 2xl:leading-[1.6]">
-              The assistant will aggregate opportunities, score relevance,
-              produce AI summaries and generate actionable reports for job
-              search decisions.
+              The assistant will aggregate opportunities, score relevance, produce AI summaries and
+              generate actionable reports for job search decisions.
             </p>
 
             <div className="mt-8 rounded-4xl border border-slate-800 bg-black/25 p-5 2xl:p-7">
@@ -103,7 +134,7 @@ export default function CurrentlyBuilding() {
                     </div>
 
                     {index < pipeline.length - 1 && (
-                      <div className="hidden sm:block absolute left-[calc(100%+0.15rem)] top-1/2 h-px w-[calc(100%-0.3rem)] -translate-y-1/2 bg-linear-to-r from-orange-500/45 to-slate-800" />
+                      <div className="absolute left-[calc(100%+0.15rem)] top-1/2 hidden h-px w-[calc(100%-0.3rem)] -translate-y-1/2 bg-linear-to-r from-orange-500/45 to-slate-800 sm:block" />
                     )}
                   </div>
                 ))}
