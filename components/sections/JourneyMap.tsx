@@ -24,21 +24,17 @@ export default function JourneyMap({ activeJourneyId, onJourneyChange }: Journey
 
   const activeIndex = journeySteps.findIndex((step) => step.id === activeStep.id);
 
-  const handleStepChange = (id: string) => {
-    onJourneyChange(id);
-  };
-
   return (
     <section
       id="journey"
-      className="relative z-10 mx-auto max-w-[112rem] px-5 py-24 sm:px-6 lg:py-32 2xl:px-10 2xl:py-40"
+      className="relative z-10 mx-auto max-w-[112rem] px-5 py-20 sm:px-6 lg:py-32 2xl:px-10 2xl:py-40"
     >
       <div className="max-w-6xl">
         <p className="text-xs font-semibold uppercase tracking-[0.28em] text-orange-400 sm:text-sm 2xl:text-base">
           Journey Map
         </p>
 
-        <h2 className="mt-4 max-w-6xl text-4xl font-semibold tracking-[-0.045em] text-white sm:text-5xl lg:text-6xl 2xl:text-[5.2rem] 2xl:leading-[0.92]">
+        <h2 className="mt-4 max-w-6xl text-[2.7rem] font-semibold leading-[0.95] tracking-[-0.055em] text-white sm:text-5xl lg:text-6xl 2xl:text-[5.2rem] 2xl:leading-[0.92]">
           From biological research to AI systems and operational decision support.
         </h2>
 
@@ -49,9 +45,9 @@ export default function JourneyMap({ activeJourneyId, onJourneyChange }: Journey
         </p>
       </div>
 
-      <div className="mt-12 grid gap-8 xl:grid-cols-[0.9fr_1.1fr] xl:items-stretch 2xl:mt-16 2xl:gap-12">
-        <div className="rounded-[2.5rem] border border-slate-800 bg-slate-950/70 p-4 shadow-2xl shadow-orange-500/5 backdrop-blur sm:p-5 2xl:p-7">
-          <div className="flex gap-3 overflow-x-auto pb-2 xl:grid xl:gap-4 xl:overflow-visible xl:pb-0">
+      <div className="mt-10 grid gap-6 lg:mt-12 xl:grid-cols-[0.9fr_1.1fr] xl:items-stretch 2xl:mt-16 2xl:gap-12">
+        <div className="rounded-[2rem] border border-slate-800 bg-slate-950/70 p-4 shadow-2xl shadow-orange-500/5 backdrop-blur sm:p-5 lg:rounded-[2.5rem] 2xl:p-7">
+          <div className="grid gap-3 xl:gap-4">
             {journeySteps.map((step, index) => {
               const isActive = step.id === activeStep.id;
 
@@ -59,9 +55,9 @@ export default function JourneyMap({ activeJourneyId, onJourneyChange }: Journey
                 <motion.button
                   key={step.id}
                   type="button"
-                  whileHover={{ scale: 1.01 }}
-                  onClick={() => handleStepChange(step.id)}
-                  className={`group min-w-[250px] rounded-2xl border p-4 text-left transition xl:min-w-0 xl:p-5 2xl:p-6 ${
+                  whileHover={{ scale: 1.005 }}
+                  onClick={() => onJourneyChange(step.id)}
+                  className={`group w-full rounded-2xl border p-4 text-left transition xl:p-5 2xl:p-6 ${
                     isActive
                       ? "border-orange-500/50 bg-orange-500/10 shadow-[0_0_34px_rgba(233,121,45,0.16)]"
                       : "border-slate-800 bg-slate-900/40 hover:border-slate-700 hover:bg-slate-900/70"
@@ -83,7 +79,7 @@ export default function JourneyMap({ activeJourneyId, onJourneyChange }: Journey
                         {step.title}
                       </span>
 
-                      <span className="mt-1 block text-xs leading-5 text-slate-500 2xl:text-base 2xl:leading-7">
+                      <span className="mt-1 block text-xs leading-5 text-slate-500 sm:text-sm 2xl:text-base 2xl:leading-7">
                         {step.subtitle}
                       </span>
                     </span>
@@ -98,7 +94,7 @@ export default function JourneyMap({ activeJourneyId, onJourneyChange }: Journey
               Current Thread
             </p>
 
-            <div className="mt-5 flex flex-wrap items-center gap-2 text-sm font-semibold uppercase tracking-[0.16em] text-slate-500 2xl:text-base">
+            <div className="mt-5 flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-slate-500 sm:text-sm 2xl:text-base">
               {principles.map((principle, index) => (
                 <span key={principle} className="flex items-center gap-2">
                   <span className={index <= activeIndex ? "text-orange-200" : "text-slate-600"}>
@@ -122,18 +118,18 @@ export default function JourneyMap({ activeJourneyId, onJourneyChange }: Journey
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.28, ease: "easeOut" }}
-          className="relative overflow-hidden rounded-[2.5rem] border border-slate-800 bg-slate-950/75 p-6 shadow-2xl shadow-orange-500/10 sm:p-8 lg:p-10 2xl:p-12"
+          className="relative overflow-hidden rounded-[2rem] border border-slate-800 bg-slate-950/75 p-5 shadow-2xl shadow-orange-500/10 sm:p-6 lg:rounded-[2.5rem] lg:p-10 2xl:p-12"
         >
           <div className="absolute right-0 top-0 h-72 w-72 translate-x-1/3 -translate-y-1/3 rounded-full bg-orange-500/10 blur-3xl" />
 
           <div className="relative z-10">
-            <div className="flex flex-col gap-4 border-b border-slate-800 pb-7 sm:flex-row sm:items-start sm:justify-between 2xl:pb-9">
+            <div className="flex flex-col gap-4 border-b border-slate-800 pb-6 sm:flex-row sm:items-start sm:justify-between 2xl:pb-9">
               <div>
                 <p className="text-xs uppercase tracking-[0.28em] text-orange-300 2xl:text-sm">
                   {activeStep.eyebrow}
                 </p>
 
-                <h3 className="mt-3 text-4xl font-semibold tracking-[-0.04em] text-white sm:text-5xl 2xl:text-[4.5rem] 2xl:leading-[0.95]">
+                <h3 className="mt-3 text-[2.6rem] font-semibold leading-[0.95] tracking-[-0.05em] text-white sm:text-5xl 2xl:text-[4.5rem] 2xl:leading-[0.95]">
                   {activeStep.title}
                 </h3>
 
@@ -145,15 +141,15 @@ export default function JourneyMap({ activeJourneyId, onJourneyChange }: Journey
               </span>
             </div>
 
-            <p className="mt-7 max-w-5xl text-lg leading-9 text-slate-300 xl:text-xl xl:leading-10 2xl:text-2xl 2xl:leading-[1.65]">
+            <p className="mt-6 max-w-5xl text-base leading-8 text-slate-300 sm:text-lg xl:text-xl xl:leading-10 2xl:text-2xl 2xl:leading-[1.65]">
               {activeStep.narrative}
             </p>
 
-            <blockquote className="mt-7 rounded-2xl border border-orange-500/20 bg-orange-500/10 p-5 text-base leading-8 text-orange-100 2xl:p-7 2xl:text-xl 2xl:leading-9">
+            <blockquote className="mt-6 rounded-2xl border border-orange-500/20 bg-orange-500/10 p-5 text-sm leading-7 text-orange-100 sm:text-base 2xl:p-7 2xl:text-xl 2xl:leading-9">
               “{activeStep.realization}”
             </blockquote>
 
-            <div className="mt-8 grid gap-6 xl:grid-cols-2 2xl:gap-8">
+            <div className="mt-7 grid gap-6 xl:grid-cols-2 2xl:gap-8">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-500 2xl:text-sm">
                   Evidence

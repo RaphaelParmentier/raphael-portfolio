@@ -20,7 +20,7 @@ export default function Hero({ onJourneySelect }: HeroProps) {
   };
 
   return (
-    <section className="relative z-10 flex min-h-[100svh] items-center overflow-hidden px-5 py-28 sm:px-6 lg:py-32 2xl:py-40">
+    <section className="relative z-10 flex min-h-[92svh] items-center overflow-hidden px-5 py-28 sm:px-6 lg:min-h-[100svh] lg:py-32 2xl:py-40">
       <div className="mx-auto grid w-full max-w-[112rem] gap-14 lg:grid-cols-[1.12fr_0.88fr] lg:items-center 2xl:gap-24">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -31,7 +31,7 @@ export default function Hero({ onJourneySelect }: HeroProps) {
             AI Engineer & Data Scientist
           </p>
 
-          <h1 className="max-w-6xl text-5xl font-semibold tracking-[-0.065em] text-white sm:text-6xl lg:text-7xl xl:text-8xl 2xl:text-[6.6rem] 2xl:leading-[0.88]">
+          <h1 className="max-w-6xl text-[3.2rem] font-semibold leading-[0.9] tracking-[-0.065em] text-white sm:text-6xl lg:text-7xl xl:text-8xl 2xl:text-[6.6rem] 2xl:leading-[0.88]">
             Turning complex information into actionable decisions.
           </h1>
 
@@ -41,7 +41,7 @@ export default function Hero({ onJourneySelect }: HeroProps) {
             and act.
           </p>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+          <div className="mt-8 hidden flex-col gap-3 sm:flex-row sm:flex-wrap lg:flex">
             <a
               href="#work"
               className="inline-flex justify-center rounded-full bg-orange-500 px-7 py-3.5 text-sm font-semibold text-white shadow-[0_0_30px_rgba(249,115,22,0.25)] transition hover:bg-orange-400 hover:shadow-[0_0_42px_rgba(249,115,22,0.35)] focus:outline-none focus:ring-2 focus:ring-orange-300 focus:ring-offset-2 focus:ring-offset-[#08090B] 2xl:px-8 2xl:py-4 2xl:text-base"
@@ -73,7 +73,7 @@ export default function Hero({ onJourneySelect }: HeroProps) {
           initial={{ opacity: 0, y: 28, scale: 0.98 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.75, delay: 0.12, ease: "easeOut" }}
-          className="relative"
+          className="relative hidden lg:block"
         >
           <div className="absolute -inset-4 rounded-[2rem] bg-orange-500/10 blur-3xl" />
 
