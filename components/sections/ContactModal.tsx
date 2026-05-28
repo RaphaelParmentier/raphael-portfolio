@@ -1,3 +1,5 @@
+// components/sections/ContactModal.tsx
+
 "use client";
 
 import { useState } from "react";
@@ -29,24 +31,23 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
   };
 
   return (
-    <div className="fixed inset-0 z-100 flex items-center justify-center bg-black/75 px-5 backdrop-blur-md">
-      <div className="relative w-full max-w-4xl overflow-hidden rounded-[2.5rem] border border-slate-800 bg-slate-950 p-6 shadow-2xl shadow-orange-500/20 sm:p-8 lg:p-10">
-        <div className="absolute right-0 top-0 h-72 w-72 translate-x-1/3 -translate-y-1/3 rounded-full bg-orange-500/10 blur-3xl" />
+    <div className="fixed inset-0 z-100 flex items-center justify-center bg-black/75 px-4 py-5 backdrop-blur-md sm:px-5">
+      <div className="relative max-h-[calc(100svh-2.5rem)] w-full max-w-lg overflow-y-auto rounded-4xl border border-slate-800 bg-slate-950 p-5 shadow-2xl shadow-orange-500/20 sm:max-w-4xl sm:p-8 lg:p-10">
+        <div className="pointer-events-none absolute right-0 top-0 h-56 w-56 translate-x-1/3 -translate-y-1/3 rounded-full bg-orange-500/10 blur-3xl sm:h-72 sm:w-72" />
 
         <div className="relative z-10">
-          <div className="flex items-start justify-between gap-6">
+          <div className="flex items-start justify-between gap-5">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-orange-400">
                 Contact
               </p>
 
-              <h2 className="mt-4 max-w-3xl text-4xl font-semibold tracking-[-0.045em] text-white sm:text-5xl">
-                Let&apos;s turn complex information into better decisions.
+              <h2 className="mt-4 max-w-3xl text-3xl font-semibold leading-[0.98] tracking-[-0.045em] text-white sm:text-5xl">
+                Let&apos;s build something useful.
               </h2>
 
-              <p className="mt-5 max-w-2xl text-base leading-8 text-slate-400 sm:text-lg">
-                Open to roles, missions and collaborations around AI, data,
-                automation and applied teaching.
+              <p className="mt-5 max-w-2xl text-sm leading-7 text-slate-400 sm:text-lg sm:leading-8">
+                Open to AI engineering, automation, analytics and applied teaching collaborations.
               </p>
             </div>
 
@@ -59,15 +60,13 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
             </button>
           </div>
 
-          <div className="mt-8 grid gap-6 lg:grid-cols-[1fr_0.9fr]">
-            <div className="rounded-4xl border border-slate-800 bg-slate-900/45 p-5 sm:p-6">
+          <div className="mt-7 grid gap-4 sm:mt-8 lg:grid-cols-[1fr_0.9fr]">
+            <div className="rounded-3xl border border-slate-800 bg-slate-900/45 p-5 sm:rounded-4xl sm:p-6">
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-orange-300">
                 Direct email
               </p>
 
-              <p className="mt-4 break-all text-base font-medium text-white sm:text-lg">
-                {email}
-              </p>
+              <p className="mt-4 break-all text-sm font-medium text-white sm:text-lg">{email}</p>
 
               <div className="mt-6 grid gap-3 sm:grid-cols-2">
                 <button
@@ -89,7 +88,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
               </div>
             </div>
 
-            <div className="rounded-4xl border border-slate-800 bg-slate-900/35 p-5 sm:p-6">
+            <div className="hidden rounded-4xl border border-slate-800 bg-slate-900/35 p-6 sm:block">
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-orange-300">
                 Good fit
               </p>
@@ -105,7 +104,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
             </div>
           </div>
 
-          <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+          <div className="mt-6 grid gap-3 sm:mt-7 sm:flex sm:flex-wrap">
             <a
               href="https://www.linkedin.com/in/raphaelparmentier/"
               target="_blank"

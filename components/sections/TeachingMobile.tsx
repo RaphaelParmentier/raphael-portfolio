@@ -3,14 +3,32 @@ import Image from "next/image";
 export default function TeachingMobile() {
   return (
     <div className="lg:hidden">
+      <div className="mb-10">
+        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-orange-400">
+          Teaching & Knowledge Design
+        </p>
+
+        <h2 className="mt-4 text-[2.65rem] font-semibold leading-[0.95] tracking-[-0.055em] text-white">
+          Teaching beyond slides.
+        </h2>
+
+        <p className="mt-6 text-base leading-8 text-slate-400">
+          I design applied learning experiences where statistics, data and AI workflows become
+          concrete systems students can explore.
+        </p>
+      </div>
+
       <div className="overflow-hidden rounded-4xl border border-white/10 bg-[#050816]">
-        <div className="relative h-56 w-full overflow-hidden border-b border-white/10">
+        <div className="relative w-full overflow-hidden border-b border-white/10 bg-black">
           <Image
             src="/images/teaching-brain-lab-current.png"
             alt="Teaching Brain Lab"
-            fill
+            width={1200}
+            height={675}
             sizes="100vw"
-            className="object-cover object-top"
+            loading="eager"
+            priority
+            className="h-auto w-full"
           />
         </div>
 
@@ -45,7 +63,7 @@ export default function TeachingMobile() {
             href="https://teaching.raphaelparmentier.dev"
             target="_blank"
             rel="noreferrer"
-            className="mt-8 block rounded-full bg-orange-500 px-6 py-4 text-center font-semibold text-white"
+            className="mt-8 block rounded-full bg-orange-500 px-6 py-4 text-center font-semibold text-white shadow-[0_0_30px_rgba(249,115,22,0.25)]"
           >
             Explore Teaching Brain Lab
           </a>
