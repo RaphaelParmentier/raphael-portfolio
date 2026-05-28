@@ -175,7 +175,7 @@ export default function Products() {
                   </div>
                 </div>
 
-                <div className="mt-6 rounded-4xl border border-orange-500/20 bg-orange-500/[0.07] p-5 2xl:p-7">
+                <div className="mt-6 rounded-4xl border border-orange-500/20 bg-orange-500/7 p-5 2xl:p-7">
                   <p className="text-xs font-semibold uppercase tracking-[0.24em] text-orange-300 2xl:text-sm">
                     Why it matters
                   </p>

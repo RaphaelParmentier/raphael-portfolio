@@ -25,12 +25,12 @@ export default function Navbar() {
             <span className="transition group-hover:text-orange-200">RP SYSTEMS</span>
           </a>
 
-          <nav className="flex min-w-0 items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-1.5 py-1.5 shadow-2xl shadow-black/20 sm:px-2 sm:gap-3 md:gap-4 lg:gap-5">
+          <nav className="flex min-w-0 items-center gap-2 rounded-full border border-white/10 bg-white/3 px-1.5 py-1.5 shadow-2xl shadow-black/20 sm:px-2 sm:gap-3 md:gap-4 lg:gap-5">
             {links.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className={`${link.className} whitespace-nowrap rounded-full px-3 py-2 text-sm font-medium text-[#B8B2AA] transition-colors hover:bg-white/[0.06] hover:text-[#F3F1EA] 2xl:text-base`}
+                className={`${link.className} whitespace-nowrap rounded-full px-3 py-2 text-sm font-medium text-[#B8B2AA] transition-colors hover:bg-white/6 hover:text-[#F3F1EA] 2xl:text-base`}
               >
                 {link.label}
               </a>

@@ -59,7 +59,7 @@ export default function Hero({ onJourneySelect }: HeroProps) {
             </a>
           </div>
 
-          <div className="mt-8 max-w-4xl rounded-2xl border border-orange-500/20 bg-orange-500/[0.07] p-5 text-sm leading-6 text-orange-50 shadow-[0_0_34px_rgba(249,115,22,0.08)] sm:p-6 2xl:text-base 2xl:leading-7">
+          <div className="mt-8 max-w-4xl rounded-2xl border border-orange-500/20 bg-orange-500/7 p-5 text-sm leading-6 text-orange-50 shadow-[0_0_34px_rgba(249,115,22,0.08)] sm:p-6 2xl:text-base 2xl:leading-7">
             <p className="font-medium text-white">
               What connects biology, statistics, automation, AI engineering and teaching?
             </p>

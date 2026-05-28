@@ -45,7 +45,7 @@ export default function Contact() {
       id="contact"
       className="relative z-10 mx-auto max-w-448 px-5 py-24 sm:px-6 lg:py-32 2xl:px-10 2xl:py-40"
     >
-      <div className="relative overflow-hidden rounded-[2.5rem] border border-orange-500/20 bg-gradient-to-br from-slate-950 via-slate-950 to-orange-950/20 p-6 shadow-2xl shadow-orange-500/10 sm:p-8 lg:p-12 2xl:p-16">
+      <div className="relative overflow-hidden rounded-[2.5rem] border border-orange-500/20 bg-linear-to-br from-slate-950 via-slate-950 to-orange-950/20 p-6 shadow-2xl shadow-orange-500/10 sm:p-8 lg:p-12 2xl:p-16">
         <div className="absolute right-0 top-0 h-96 w-96 translate-x-1/3 -translate-y-1/3 rounded-full bg-orange-500/10 blur-3xl" />
 
         <div className="relative z-10 grid gap-12 xl:grid-cols-[1.15fr_0.85fr] xl:items-start 2xl:gap-16">
