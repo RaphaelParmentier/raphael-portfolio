@@ -1,7 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { journeyPreview } from "@/data/journey";
+import { motion } from "framer-motion";
 
 const journeyDescriptions = [
   "Biology, observation and experimental data",
@@ -28,22 +28,10 @@ export default function Hero() {
             Turning complex information into actionable decisions.
           </h1>
 
-          <div className="mt-6 flex flex-wrap gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-slate-500 sm:text-sm 2xl:text-base">
-            <span>Scientist</span>
-            <span className="text-orange-400">→</span>
-            <span>Statistician</span>
-            <span className="text-orange-400">→</span>
-            <span>Builder</span>
-            <span className="text-orange-400">→</span>
-            <span>AI Engineer</span>
-            <span className="text-orange-400">→</span>
-            <span>Teacher</span>
-          </div>
-
           <p className="mt-7 max-w-4xl text-base leading-8 text-slate-400 sm:text-lg xl:text-xl xl:leading-9 2xl:text-[1.35rem] 2xl:leading-10">
-            From biological research and pharmaceutical R&D to operational
-            automation, AI engineering and higher education, I design systems
-            that help people understand, decide and act.
+            From biological research and pharmaceutical R&D to operational automation, AI
+            engineering and higher education, I design systems that help people understand, decide
+            and act.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">

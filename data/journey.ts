@@ -4,6 +4,7 @@ export type JourneyStep = {
   shortTitle: string;
   subtitle: string;
   period: string;
+  badge: string;
   eyebrow: string;
   narrative: string;
   realization: string;
@@ -16,11 +17,12 @@ export const journeySteps: JourneyStep[] = [
     id: "scientist",
     title: "Scientist",
     shortTitle: "Science",
-    subtitle: "Curiosity, observation and experimental data",
+    subtitle: "Observation, biology and experimental systems",
     period: "Biology & early research",
+    badge: "2015 — 2020",
     eyebrow: "Where the questions started",
     narrative:
-      "I first wanted to understand living systems: behaviour, adaptation and experimental biology. Field and lab experiences, from ONF work to honeybee learning research, showed me that collecting observations is only the beginning.",
+      "I first wanted to understand living systems: behaviour, adaptation and experimental biology. Field and lab experiences showed me that collecting observations is only the beginning.",
     realization:
       "Observation creates data. Scientific reasoning turns it into questions worth testing.",
     proof: [
@@ -35,77 +37,85 @@ export const journeySteps: JourneyStep[] = [
     id: "statistician",
     title: "Statistician",
     shortTitle: "Statistics",
-    subtitle: "Turning complex biological data into evidence",
-    period: "Bioinformatics & Biostatistics",
+    subtitle: "Turning uncertainty into evidence",
+    period: "Bioinformatics, Biostatistics & Pharma R&D",
+    badge: "2019 — 2024",
     eyebrow: "From observation to inference",
     narrative:
-      "Bioinformatics and biostatistics became the bridge between scientific curiosity and reliable conclusions. CRISPR prediction, large-scale biological datasets and sperm whale behaviour analysis made the limits of intuition obvious.",
+      "From CRISPR prediction research to sperm whale behavioural analysis and pharmaceutical R&D at GSK and Sanofi, I learned how difficult it is to extract reliable conclusions from noisy biological data.",
     realization:
-      "Data becomes evidence only through rigorous analysis, reproducible workflows and honest uncertainty management.",
+      "Statistics became the bridge between experimental complexity and actionable evidence.",
     proof: [
-      "Master in Bioinformatics and Biostatistics",
-      "CRISPR prediction and supervised learning exposure",
-      "Big Data, SQL and statistical modelling foundations",
-      "Behavioural analysis under uncertainty on ecological data",
+      "CRISPRdb statistical validation",
+      "Unsupervised learning on sperm whale sonar exposure",
+      "Biostatistics in regulated pharmaceutical R&D environments",
+      "Experimental uncertainty and scientific decision support",
     ],
-    tools: ["R", "SQL", "Statistics", "Machine Learning", "Big Data"],
+    tools: [
+      "Statistics",
+      "Bioinformatics",
+      "Experimental design",
+      "Machine learning",
+      "R&D workflows",
+    ],
   },
   {
     id: "builder",
     title: "Builder",
     shortTitle: "Builder",
-    subtitle: "Operational analytics and automation mindset",
+    subtitle: "Operational systems and automation",
     period: "Serebis · 2024 — 2026",
+    badge: "2024 — 2026",
     eyebrow: "The automation pivot",
     narrative:
-      "Serebis moved me closer to concrete business problems: fragmented information, repetitive reporting and operational decisions that needed faster feedback loops. I started building tools to reduce manual work and improve visibility.",
-    realization:
-      "Analysis creates insight. Systems create impact.",
+      "At Serebis, the focus shifted from research environments to operational constraints: inventory, maintenance, reporting and workflow automation. Building internal tools revealed the gap between analysis and usable systems.",
+    realization: "An analysis only matters if people can actually use it inside a workflow.",
     proof: [
-      "Automated reporting workflows for recurring operational follow-up",
-      "Excel export consolidation and reliability checks",
-      "Inventory monitoring and anomaly-oriented analysis",
-      "Maintenance tracking dashboards and decision-support indicators",
+      "Operational analytics",
+      "Reporting automation",
+      "Internal decision-support tools",
+      "Process structuring",
     ],
-    tools: ["Process analysis", "Automation", "Dashboards", "Reporting", "Operations"],
+    tools: ["Automation", "Workflow design", "Business operations", "R Shiny", "Internal tooling"],
   },
   {
     id: "engineer",
     title: "AI Engineer",
     shortTitle: "AI",
-    subtitle: "Building deployed systems rather than isolated analyses",
+    subtitle: "Production-oriented AI systems",
     period: "Current transition",
+    badge: "2026 — Present",
     eyebrow: "From tools to products",
     narrative:
-      "AI engineering became the natural extension of my previous work. Statistics taught me how to analyse. Operations taught me where friction lives. Software and AI now let me build systems that scale this reasoning.",
-    realization:
-      "AI scales analytical thinking when it is connected to workflows, interfaces and real decisions.",
+      "The next step was not only analysing information, but designing complete AI-powered systems: data ingestion, scoring, reporting and decision-support pipelines.",
+    realization: "AI became a systems problem: architecture, workflows, interfaces and deployment.",
     proof: [
-      "Current AI Engineering training path",
-      "Full-stack AI Data Quality Auditor deployed with frontend and backend",
-      "LLM-assisted reporting and validation workflows",
-      "Career Intelligence Assistant planned as an opportunity decision-support system",
+      "AI Data Quality Auditor",
+      "Deployed analytical APIs",
+      "LLM-assisted reporting workflows",
+      "Career Intelligence Assistant",
     ],
-    tools: ["Next.js", "FastAPI", "Python", "LLMs", "Deployment"],
+    tools: ["FastAPI", "Next.js", "LangChain", "Cloud deployment", "AI workflows"],
   },
   {
     id: "teacher",
     title: "Teacher",
     shortTitle: "Teaching",
-    subtitle: "Knowledge transfer through applied learning experiences",
+    subtitle: "Making complex systems understandable",
     period: "Télécom SudParis · 2024 — Present",
+    badge: "2024 — Present",
     eyebrow: "Clarity as a discipline",
     narrative:
-      "Teaching forced me to make complex ideas usable. After early interventions in Big Data for healthcare, databases, statistics and machine learning, I designed a Strategic Data Analytics course for a Marketing Digital major.",
+      "Teaching became a natural extension of the work: turning statistical reasoning, AI systems and analytical workflows into practical learning experiences.",
     realization:
-      "Teaching forces clarity: if people cannot use the concept, they have not really learned it.",
+      "Understanding is not enough. Students need systems they can explore and build with.",
     proof: [
-      "2024-2025 guest lectures in Big Data, databases, statistics and ML",
-      "2026 Strategic Data Analytics pilot course",
-      "Course integrated into the official curriculum after strong feedback",
-      "Teaching Brain Lab built to move beyond static slides",
+      "Strategic Data Analytics course",
+      "Big Data & healthcare interventions",
+      "Interactive teaching systems",
+      "Teaching Brain Lab",
     ],
-    tools: ["Statistics", "Big Data", "Data literacy", "AI education", "Learning design"],
+    tools: ["Pedagogy", "Knowledge transfer", "Learning systems", "Communication"],
   },
 ];
 
